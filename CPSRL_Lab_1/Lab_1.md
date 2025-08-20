@@ -165,9 +165,9 @@ Shown in Fig X. is the room layout and the position of the cameras in the room l
 5. Extract/Unzip NatNet_SDK_4.3.zip and udp_c_comm_matlab_simulink.zip each zip file respectively into the OptiTrack folder.  
 
 6. Verify you have these MATLAB Addons  
-* Instrument Control Toolbox Addon 
-* Aerospace Blockset Addon 
-* Simulink Desktop Real-Time Blockset Addon 
+    * Instrument Control Toolbox Addon 
+    * Aerospace Blockset Addon 
+    * Simulink Desktop Real-Time Blockset Addon 
 <!--Picture 1-->
 <figure>
   <img src="./Instrument_Control_Toolbox_Addon.png" alt="Instrument Control Toolbox MATLAB Addon" width: 100%;
@@ -214,16 +214,16 @@ Shown in Fig X. is the room layout and the position of the cameras in the room l
 
 In the version that you have unzipped it is: 
 
-* dllPath = fullfile('c:','Users','ORION1','Desktop','Stephen KWOK CHOON DO NOT TOUCH','Motive Streaming','NatNet_SDK_2.8','NatNetSDK','lib','x64','NatNetML.dll'); 
+    * dllPath = fullfile('c:','Users','ORION1','Desktop','Stephen KWOK CHOON DO NOT TOUCH','Motive Streaming','NatNet_SDK_2.8','NatNetSDK','lib','x64','NatNetML.dll'); 
 
-* The dllPath has to point to the NatNetML.dll file located inside the NatNet_SDK_X.X  developer folder that you have downloaded. 
+    * The dllPath has to point to the NatNetML.dll file located inside the NatNet_SDK_X.X  developer folder that you have downloaded. 
 
 
 10. Open the NatNet_SDK_4.3 folder and go down the path > NatNetSDK > lib > x64 
 
-* NOTE: the version of NatNet_SDK may be different at the time of downloading of the SDK. 
+    * NOTE: the version of NatNet_SDK may be different at the time of downloading of the SDK. 
 
-* Your path may look like this: C:\Users\skwokcho\Desktop\Optitrack\NatNet_SDK_4.3\NatNetSDK\lib\x64
+    * Your path may look like this: C:\Users\skwokcho\Desktop\Optitrack\NatNet_SDK_4.3\NatNetSDK\lib\x64
 
 11. Copy the path at the top of the folder.  
 <figure>
@@ -301,7 +301,7 @@ NOTE: This Simulink template contains example segments of code that are not curr
 17. Close the Scope window if it is in your way 
 
 18. To move around in Simulink, you can zoom in and out using the scroll wheel. You can also hold the middle mouse button and move the mouse to move around the workspace 
-* You can click and drag the boxes and lines around to connect and organize them.  
+    * You can click and drag the boxes and lines around to connect and organize them.  
 
 19. Comment out all the control blocks after and including the big Matlab Block named “Solenoid Mapping Function” by holding left clicking off to the side and drawing a big selection box. Then right click on the Matlab Block and select Comment Out. 
 <figure>
@@ -340,7 +340,7 @@ NOTE: This Simulink template contains example segments of code that are not curr
 </figure>
 
 23. Change the mux so that it has 6 inputs.  
-* NOTE: If you are tracking 2,3, ... X rigid body objects this needs to be adjusted accordingly. Each rigid body object provides Position [X,Y,Z] and Orientation [Theta, Psi, Phi] OR Quaternion [Qw,Qx,Qy,Qz] - Refer to the FuncMotive.m file for customization – Or ask the instructor :)  
+    * NOTE: If you are tracking 2,3, ... X rigid body objects this needs to be adjusted accordingly. Each rigid body object provides Position [X,Y,Z] and Orientation [Theta, Psi, Phi] OR Quaternion [Qw,Qx,Qy,Qz] - Refer to the FuncMotive.m file for customization – Or ask the instructor :)  
 <figure>
   <img src="./.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
@@ -413,7 +413,353 @@ Objectives:
 
 
 
+
+
 ![alt text](UDP_Send_Block.png) 
 
 
 ![alt text](MATLAB_Run_Button.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 5.2 - Setting up Computer 1 to rebroadcast Motive Data to be received in Simulink on another computer.  
+
+1. FuncMotive.m only works on the computer running Motive (Computer 1), therefore we need to rebroadcast the data in Simulink so that it can be received on another computer.  
+
+2. Add a UDP Send block from the Instrument Control Toolbox and connect it to the data lines 
+
+ 
+
+Figure X: UDP Send in the Simulink Library Browser 
+
+ 
+
+ 
+
+ 
+
+Figure X: INFO 
+
+ 
+ 
+
+3. Use these settings for the UDP Send from the Instrument Control Toolbox. You need to set the remote. Make sure to disable “Enable blocking mode: ” 
+
+ 
+
+Figure X: Settings for the UDP Send Box 
+
+ 
+
+
+4. Add the Real-Time Sync and Set Pace blocks to your simulation. (This Step Not needed – Slows the Simulink Sim.) 
+
+ 
+
+Figure X: Simulink Model to create on Student Computer. 
+
+5. Utilize the Set Pace to collect data at a set pace set to 1 sim sec to clock second. 
+
+ 
+
+Figure X: Aerospace Blockset – Set Pace Blockset 
+
+ 
+
+Figure X: Settings for Set Pace – Match Sim Pace to Clock Time, with Inherit Sample Time setting 
+
+6. Your student computer may also be able to support the real-time sync block. However this may depend on the student’s computer it is not as necessary and can be skipped as compared to the Set Pace Block. 
+
+ 
+
+ 
+
+Figure X: Real-Time Sync Block 
+
+Figure X: Setting for Real-Time Sync  
+
+ 
+
+7. Double Click to set the settings for the Real-Time Synchronization under Simulink Desktop Real-Time Toolbox. – Depending on your application you can adjust the sampling rate of the Real-Time Synchronization. For right now set it is okay to sample at  0.1 seconds, with a maximum missed tick of 50. (This Step Not needed – Slows the Simulink Sim.) 
+
+ 
+
+ Inserting image... 
+
+Figure X: Settings for Real-Time Synchronization. 
+
+ 
+
+ 
+
+Figure X: Set Pace settings. 
+
+8. Congratulations! You are now sending via UDP communication to YOUR COMPUTER.  
+
+ 
+
+NOTE: Computer 1 is now sending data to the particular IP address and Port Number as described. User Datagram Protocol (UDP) does not need a handshake with the receiver and when running is sending as much data as decided by the Real-Time Synchronization. In this case it is commanded to act at a sample rate of 0.1 seconds. 
+
+ 
+
+### 5.3 - Setting up Your Computer to receive Motive Data from Computer 1 Simulink. 
+
+1. Follow the same steps as 5.1 on your own computer, but do not run the code at the end.  
+
+You may skip the steps relating to FuncMotive - we are going to connect UDP Receive to this Simulink Model. 
+
+NOTE: Make sure to save often and save once you are done with this step your Simulink Model on Your Computer should look like this: 
+
+ 
+
+Figure X: Simulink Setup on Your Computer 
+
+ 
+
+2. You will need to have the Instrument Control Toolbox addon, to check if you have it and to install it click the addons button in Matlab 
+
+NOTE: Make sure you are connected to the school Wi-fi network to have internet access. 
+
+Figure X: MATLAB Addon Button 
+
+3. Search for Instrument Control Toolbox in the addon browser, it is made by MathWorks press the install button. 
+
+Figure X: Instrument Control Toolbox Addon 
+
+4. Once the installation is complete, Search for Simulink Desktop Real-Time in the addon browser, it is made by MathWorks press the install button. 
+
+ 
+
+Figure X: Simulink Desktop Real-Time Addon 
+
+5. Once Matlab has restarted, go back to Simulink and comment out FuncMotive block and disconnect it.  
+
+ 
+
+Figure X: Comment out FuncMotive Block 
+
+6. Grab a UDP Receive block from the Instrument Control Toolbox and connect it in place of the FuncMotive block. 
+
+ 
+
+Figure X: Insert UDP Recieve Block 
+
+7. Double click to set the settings for the UDP Receive block.  
+
+Figure X: INFO 
+
+OPTIONAL: Add the Real-Time Sync blocks to your simulation. (This Step is optional – Slows the Receiver Simulink Sim.) 
+
+ 
+
+Inserting image... 
+
+Figure X: INFO 
+
+10. Double Click to set the settings for the Real-Time Synchronization under Simulink Desktop Real-Time Toolbox. – Depending on your application you can adjust the sampling rate of the Real-Time Synchronization. For right now set it is okay to sample at  0.1 seconds, with a maximum missed tick of 50.  
+
+(This Step is optional – Slows the Receiver Simulink Sim.) 
+
+ 
+
+Figure X: Real-Time Synchronization Block. 
+
+ 
+
+11. Run 'sldrtkernel -setup'  in MATLAB to setup Real Time Sync (Only have to do this the first time you use Real-Time Sync) 
+
+(This Step is optional – Slows the Receiver Simulink Sim.) 
+
+ 
+
+Figure X: Running sldrtkernel -setup to activate the real-time synchronization 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+12. Hit run and should receive data ( Rigid body was oscillated in the x-direction ) 
+
+Figure X: Data Captured from Remote Computer 
+
+Summary of Objectives: 
+
+ 
+
+Download NatNet SDK on Computer 1 
+
+Download udp_c_comm_matlab_simulink.zip on Computer 1 
+
+Validate and verify correct settings in the FuncMotive function on Computer 1 
+
+Update Simulink Sim on Computer 1 
+
+Create UDP Send in Simulink Sim using Instrument Control Tool Box 
+
+Receive Optitrack Data from Motive to Simulink on Computer 1 
+
+Broadcast Optitrack Data from Simulink on Computer 1 
+
+Create Simulink Model on your Computer with UDP Receive function. 
+
+Receive Optitrack data in Simulink on your Computer. 
+
+Document and report on all steps as outlined. 
+
+ 
+
+   
+
+ 
+
+ 
+
+## 6: EXTRA CREDIT - Using MATLAB Simulink 3D Animation to create a virtual representation of the data from Motive. 
+
+ 
+
+Objectives: 
+
+ 
+
+Run through SImulink Tutorials on how to create 3D animation 
+
+Insert the Actor and Simulation 3D Scene Configuration Blocks within your simulink model. 
+
+Insert an appropriate CAD STL file for your object (ex. Aircraft, Spacecraft, Rocket, Car, etc...) 
+
+Link the input for the Actor to the output of the Motive State Data [XYZ, Roll, Pitch, Yaw] 
+
+Demonstrate that your model moves, spins, and is tracked. 
+
+ 
+
+ 
+
+ 
+
+### 6.1 Information on how to use Simulink 3D 
+
+You will need to have the Simulink 3D Animation addon, to check if you have it and to install it click the addons button in MATLAB. 
+
+NOTE: Make sure you are connected to the school Wi-fi network to have internet access. 
+
+Figure X: AddOn button 
+
+Search for Simulink 3D Animation in the addon browser, it is made by MathWorks 
+
+Figure X: Simulink 3D Animation AddOn 
+
+Once installed, go to the documentation for the addon and go to the get started page and go through the “Create 3D Simulation Using Simulink” documents. 
+
+https://www.mathworks.com/help/sl3d/ 
+
+https://www.mathworks.com/help/sl3d/create-3d-simulation-using-simulink.html  
+
+ 
+
+To open the 3D sim examples, run the command open_system("CreateWorld"); 
+
+ 
+
+  a) in MATLAB and click the warning about running it in Simulink. https://www.mathworks.com/help/sl3d/create-world-and-actor-using-simulink.html  
+
+ 
+
+Figure X: Using the open_system("CreateWorld"); Command 
+
+5. It is left to the reader to go through the documentation and examples of how to create and simulate virtual objects in Simulink. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+### 6.2 Connecting the Motive Data to a 3D simulink example. 
+
+1. Open the example CreateActorFrom3DGraphic. 
+
+    * open_system("CreateActorFrom3DGraphic"); 
+
+2. Copy the Actor and Simulation 3D Scene Configuration Blocks and paste them into the Simulink_UDP Simulink file. 
+
+Inserting image... 
+
+Figure X: Simulink Model with 3D blocks inserted. 
+
+3. Open the Actor Block (Cylinder) and modify variables.  
+* Change the variable name of the block as appropriate. 
+
+Inserting image... 
+
+Figure X: Actor Variable Name 
+
+* Go to the Inputs tab and click on browse at the bottom of the white box, then select translation and hit the right arrow. Then select rotation then hit the right arrow 
+
+ 
+
+Figure X: Setting Up Actor Inputs 
+
+4. The actor block will now have inputs for translation and rotation. Hook up these inputs. 
+    * Set Gains to 1 as inputs are already in meters 
+    * Have 2 Mux of 3 inputs each, one for translation and one for rotation 
+    * Put a transpose after each Mux, as the Mux creates column vectors and the actor inputs expect row vectors 
+    * Insert A gain is needed after. 
+5. You should have connection something like this 
+
+    * You may need to mess with gains and switching inputs to get it to work correctly 
+
+Inputs are in degrees and you may need to adjust the coordinate frame to account for discontinuity in angle reading. 
+
+ 
+
+In the Simulation 3D scene block change the scene view to custom and input. 
+
+7. CONNECT TO Space Robotics Lab WIFI ROUTER 
+
+8. Ensure that Data is being streamed and collected. 
+
+9. Load an optional STL file of your actor. For example a CAD of a Rocket, Satellite, Spacecraft, aircraft, or any other STL format CAD file as appropriate. 
+    * Replace the createshape with 
+    * load(Actor,'Simcraft_Assembly_V3_EVERYTHING_PART.STL', (1/39.8/100)*[1 1 1]); 
+
+10. Your Simulink should now have a visualization of a CAD object that moves with the Motive state data [X,Y,Z, Roll, Pitch, Yaw] 
+
+ 
+
+
+
+ Figure X: Example Virtual Object that Moves with Motive Data. 
