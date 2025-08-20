@@ -114,92 +114,43 @@ Objectives:
   a.	The power switches to turn the network switch and router on are behind the computer monitors. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
 
 ## 5: Getting Data from the Motive Software into Matlab Simulink 
 
 #### Learning Objectives
 <div style="color:black; background:lightblue; border: 1px dashed black">
 
-``` 
-1. Download NatNet SDK on Computer 1 
+```
+1. Download NatNet SDK on Computer 1
+
 2. Download udp_c_comm_matlab_simulink.zip on Computer 1 
+
 3. Validate and verify correct settings in the FuncMotive function on Computer 1 
+
 4. Update Simulink Sim on Computer 1 
+
 5. Create UDP Send in Simulink Sim using Instrument Control Tool Box 
+
 6. Receive Optitrack Data from Motive to Simulink on Computer 1 
+
 7. Broadcast Optitrack Data from Simulink on Computer 1 
+
 8. Create Simulink Model on your Computer with UDP Receive function. 
+
 9. Receive Optitrack data in Simulink on your Computer. 
+
 10. Document and report on all steps as outlined. 
-``` 
+```
 </div>
 
 ### 5.1 How to get receive Motive data in Simulink using FuncMotive.m on Computer 1 Only. 
@@ -488,8 +439,6 @@ NOTE: This Simulink template contains example segments of code that are not curr
 </figure>
 Figure X: INFO 
 
- 
- 
 
 3. Use these settings for the UDP Send from the Instrument Control Toolbox. You need to set the remote. Make sure to disable “Enable blocking mode: ” 
 <!--Picture 1-->
@@ -502,7 +451,6 @@ Figure X: INFO
 </figure>
 Figure X: Settings for the UDP Send Box 
 
- 
 
 4. Add the Real-Time Sync and Set Pace blocks to your simulation. (This Step Not needed – Slows the Simulink Sim.) 
 <!--Picture 1-->
@@ -514,8 +462,6 @@ Figure X: Settings for the UDP Send Box
   <figcaption>Figure 1.     </figcaption>
 </figure>
 Figure X: Simulink Model to create on Student Computer. 
-
-
 
 
 5. Utilize the Set Pace to collect data at a set pace set to 1 sim sec to clock second. 
@@ -715,15 +661,24 @@ Figure X: Data Captured from Remote Computer
 
 ``` 
 Objectives: 
-1. Download NatNet SDK on Computer 1 
-2. Download udp_c_comm_matlab_simulink.zip on Computer 1 
-3. Validate and verify correct settings in the FuncMotive function on Computer 1 
-4. Update Simulink Sim on Computer 1 
+1. Download NatNet SDK on Computer 1
+
+2. Download udp_c_comm_matlab_simulink.zip on Computer 1
+
+3. Validate and verify correct settings in the FuncMotive function on Computer 1
+
+4. Update Simulink Sim on Computer 1
+
 5. Create UDP Send in Simulink Sim using Instrument Control Tool Box 
+
 6. Receive Optitrack Data from Motive to Simulink on Computer 1 
+
 7. Broadcast Optitrack Data from Simulink on Computer 1 
+
 8. Create Simulink Model on your Computer with UDP Receive function. 
+
 9. Receive Optitrack data in Simulink on your Computer. 
+
 10. Document and report on all steps as outlined. 
 ``` 
 </div>
