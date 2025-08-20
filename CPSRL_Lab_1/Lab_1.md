@@ -118,11 +118,10 @@ Shown in Fig X. is the room layout and the position of the cameras in the room l
 
 ## 5: Getting Data from the Motive Software into Matlab Simulink 
 
-
+#### Learning Objectives
 <div style="color:black; background:lightblue; border: 1px dashed black">
 
 ``` 
-Objectives: 
 1. Download NatNet SDK on Computer 1 
 2. Download udp_c_comm_matlab_simulink.zip on Computer 1 
 3. Validate and verify correct settings in the FuncMotive function on Computer 1 
@@ -135,17 +134,6 @@ Objectives:
 10. Document and report on all steps as outlined. 
 ``` 
 </div>
-
-<br> <!-- New Line/Paragraph -->
-
-Or Use Table Method:
-
-| Objectives:  |
-| ----------- |
-| 1. Download NatNet SDK on Computer 1 |
-| 2. Download udp_c_comm_matlab_simulink.zip on Computer 1 |
-| 3. Validate and verify correct settings in the FuncMotive function on Computer 1  |
-
 
 ### 5.1 How to get receive Motive data in Simulink using FuncMotive.m on Computer 1 Only. 
 
@@ -238,7 +226,6 @@ In the version that you have unzipped it is:
 * Your path may look like this: C:\Users\skwokcho\Desktop\Optitrack\NatNet_SDK_4.3\NatNetSDK\lib\x64
 
 11. Copy the path at the top of the folder.  
-
 <figure>
   <img src="./dllPath_file_explorer.png" alt="Selecting Path in File Explorer" width: 100%;
   height: auto;
@@ -247,9 +234,156 @@ In the version that you have unzipped it is:
   <figcaption>Figure 1. Showing two different ways to find the file path for the NatNetML.dll file.     </figcaption>
 </figure>
 
+12. Paste the path in the FuncMotive.m script, above the dllPath line of code (see figure X in step 7 and 11.). And make sure to comment out the path as shown. 
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+
+13. Change the existing dllPath path to the path that was pasted above and point to NatNetML.dll . Refer to figure X. 
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Showing the updated dllPath in the FuncMotive.m file. 
+
+ 
+
+14. Make sure the Matlab workspace file path points back to the FuncMotive.m folder 
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Inserting image... 
+
+Figure X: Matlab Pointing to the correct folder that contains the FuncMotive.m file. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+15. Change the IP address in Funcmotive.m to the IP Address of the computer running Motive. This is because the Motive software is broadcasting on Computer 1 on the IP address of “192.168.1.10” 
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Changing IP address of the Host in FuncMotive.m 
 
 
+16. Then open Simulink_UDP.slx in MATLAB Simulink 
+<figure>
+  <img src="./" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Simulink Block diagram of Simulink_UPD.slx file.  
 
+NOTE: This Simulink template contains example segments of code that are not currently necessary but can be implemented later for control of a vehicle. We are going to edit and comment out parts of the Simulink model that are not needed at this moment in time. 
+
+17. Close the Scope window if it is in your way 
+
+18. To move around in Simulink, you can zoom in and out using the scroll wheel. You can also hold the middle mouse button and move the mouse to move around the workspace 
+* You can click and drag the boxes and lines around to connect and organize them.  
+
+19. Comment out all the control blocks after and including the big Matlab Block named “Solenoid Mapping Function” by holding left clicking off to the side and drawing a big selection box. Then right click on the Matlab Block and select Comment Out. 
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+
+20. Disconnect the lines to the commented-out code by clicking and dragging the end of the arrows. 
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+
+21. Go to the right end of the control section and copy the black box(mux) and text box(display). 
+<figure>
+  <img src="./selecting_mux_display.png" alt="selecting mux and display" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1. Copying Mux and Display Blocks    </figcaption>
+</figure>
+
+22. Paste it next to the lines you disconnected earlier and “uncomment” the mux and display to activate them. You may need to move the previously commented blocks to the left to make some space.  
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+
+23. Change the mux so that it has 6 inputs.  
+* NOTE: If you are tracking 2,3, ... X rigid body objects this needs to be adjusted accordingly. Each rigid body object provides Position [X,Y,Z] and Orientation [Theta, Psi, Phi] OR Quaternion [Qw,Qx,Qy,Qz] - Refer to the FuncMotive.m file for customization – Or ask the instructor :)  
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+
+24. Connect X, Y, Z, Yaw, Pitch, and Roll to the Mux (black box). You will need to delete the terminates on the Z and angle values. Also delete the d/dt, derivative blocks. You can also add a scope to any of the channels.  
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+
+25. Verify Motive has the correct broadcast settings. 
+<figure>
+  <img src="./Motive_Broadcast_Settings.png" alt="Motive Broadcast Settings" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1. Verify Motive Broadcast Settings    </figcaption>
+</figure>
+
+26. Click run on Simulink. You should see data being streamed and displayed from Motive.
+<!--Picture 1-->
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+<!--Picture 2-->
+<figure>
+  <img src="./.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
 
 
 <!-- Im doing this first  -->
@@ -276,3 +410,10 @@ Objectives:
 10. Document and report on all steps as outlined. 
 ``` 
 </div>
+
+
+
+![alt text](UDP_Send_Block.png) 
+
+
+![alt text](MATLAB_Run_Button.png)
