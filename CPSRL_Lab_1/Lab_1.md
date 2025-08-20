@@ -124,9 +124,10 @@ Objectives:
 ``` 
 </div>
 
-
+<br>
 
 Or Use Table Method:
+
 | Objectives:  |
 | ----------- |
 | 1. Download NatNet SDK on Computer 1 |
