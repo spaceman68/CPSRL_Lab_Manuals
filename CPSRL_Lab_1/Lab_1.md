@@ -22,14 +22,26 @@ The Space Robotics Laboratory (SRL) is equipped with four (4) optical tracking c
   <figcaption>Figure 1. Prime X 13 Camera.  </figcaption>
 </figure>
 
+Shown in Fig 1. Each camera has a resolution of up to 1.3 Megapixels, with a 3D tracking accuracy of up to 0.20 mm, rated natively up to 240 Frames Per Second, with a maximum frame rate of 1000 Frames Per Second.
 
 
+<figure>
+  <img src="./Motive_Software.png" alt="Motive Software" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 2. A representation of the Motive Software tracking a rigid body object. Lines of sight of each camera is shown.  </figcaption>
+</figure>
 
+Shown in Fig X. is the room layout and the position of the cameras in the room layout. 
 
-
-
-
-
+<figure>
+  <img src="./room_layout_image.png" alt="Room Layout" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 3. Room Layout  </figcaption>
+</figure>
 
 
 
