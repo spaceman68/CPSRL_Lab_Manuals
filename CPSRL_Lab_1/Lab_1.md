@@ -33,7 +33,7 @@ Shown in Fig 1. Each camera has a resolution of up to 1.3 Megapixels, with a 3D 
   <figcaption>Figure 2. A representation of the Motive Software tracking a rigid body object. Lines of sight of each camera is shown.  </figcaption>
 </figure>
 
-Shown in Fig X. is the room layout and the position of the cameras in the room layout. 
+Shown in Figure 3. is the room layout and the position of the cameras in the room layout. 
 
 <figure>
   <img src="./room_layout_image.png" alt="Room Layout" width: 100%;
@@ -43,8 +43,75 @@ Shown in Fig X. is the room layout and the position of the cameras in the room l
   <figcaption>Figure 3. Room Layout  </figcaption>
 </figure>
 
+### Room Layout (4- Camera Optitrack Array)
+
+Illustrated here in Fig X and X is the floor plan of the SRL as well as an illustration of the line of sight of each camera.
+
+<p align="center">
+  <img alt="Light" src="./Floor_Plan_SRL.png" width="40%">
+&nbsp; &nbsp;; &nbsp;
+  <img alt="Dark" src="./Camera_Illustration.png" width="40%">
+</p>
+<p align = "center">
+  <caption> Figure 4. LEFT: Floor Illustration, RIGHT: Camera View Angle </figcaption>
+</p>
+
+### Wiring Data Connection Diagram
 
 
+
+
+Shown here in Fig. 7 is a wiring connection diagram of the cameras, switch, Wi-Fi router as well computer 1 and 2.
+
+<figure>
+  <img src="./Connection_Diagram.png" alt="Wiring Connection Diagram of SRL" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 7. Computer 1 (LEFT) and Computer 2 (RIGHT)  </figcaption>
+</figure>
+
+
+Shown here in fig. 8 are the two computers that are connected to the Switch and Optitrack computers. Computer 1 on the left is used to operate Motive software for the Optitrack Camera network.
+
+
+<figure>
+  <img src="./computer_1_and_2.jpg" alt="Computer 1 and 2" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 8. Computer 1 (LEFT) and Computer 2 (RIGHT)  </figcaption>
+</figure>
+
+
+#### Learning Objectives
+
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+``` 
+Objectives: 
+1.	Understand how the cameras function and find position
+2.	Understand how the Lab Network
+3.	Facilitating the use of the Motive Software and Cameras
+  a.	Calibrate Cameras
+  b.	Create Ridged Bodies
+  c.	Broadcast Data from Motive to adjacent software
+4.	Detect and display data from Motive in Matlab
+5.	Detect and display data from Motive in Simulink
+6.	Create 3D simulations in Simulink
+7.	Link the data from motive and input into 3D simulink simulation 
+``` 
+</div>
+
+
+## 1: Starting Things Up
+1.	Set up the space:
+  a.	Remove objects blocking the cameras
+  b.	During operation and testing, minimize camera line of sight obstructions.
+  c.	Remove highly reflective objects and high vis items
+2.	Make sure to clear the space of things that block the cameras, and anything that is high visibility or highly reflective as it will add clutter and confusion when operating the cameras.
+3.	Turn on both computers, the network switch, and the router. 
+  a.	The power switches to turn the network switch and router on are behind the computer monitors. 
 
 
 
