@@ -297,8 +297,6 @@ This step is necessary in order to set the Global XYZ reference frame.
 
 
 **Summary of Objectives:**
- 
-
 
 <div style="color:black; background:lightblue; border: 1px dashed black">
 
@@ -313,19 +311,130 @@ This step is necessary in order to set the Global XYZ reference frame.
 </div>
 
 
+## 3: Setting Up Motive to Track Objects and Broadcast Data
 
 
 
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+```
+Objectives:
+
+1. Make a Ridged body in Motive
+2. In Motive get the position and rotation graphs for your Ridged Body
+3. Set up and Turn on Broadcast 
+4. Get screenshots for lab report
+
+```
+</div>
+
+### 3.1 Create Rigid Body
+1.	To reset the layout of Motive on Computer 1, go to the menu bar at the  top left and click on the Layout button then click on the Calibration   button as shown in figure X to reset the layout to a default orientation and information
+
+<figure>
+  <img src="./Calibration_Layout_setting.png" alt="Camera Location Identified" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 22. Calibration Layout  </figcaption>
+</figure>
+
+<figure>
+  <img src="./Standard_Motive_Layout.png" alt="Standard Motive Layout" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 23. Standard layout of the Motive Software if the ”Layout > Calibrate” button is pressed. </figcaption>
+</figure>
+
+2.	Recall From Earlier: Motive recreates the simulation space virtually, which is shown in the top middle of the screen. 
+
+  - Use the scroll wheel to the virtual camera to zoom in and out. 
+  - Hold down the middle mouse button (push down the scroll wheel) and move the mouse to translate the virtual camera.
+  - Hold down right click and move the mouse to rotate the virtual camera.
+
+<figure>
+  <img src="./Motive_Virtual_Space.png" alt="Motive Virtual Space" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 24. Motive Virtual Space </figcaption>
+</figure>
+
+3.	Below the virtual space, the cameras that are connected are shown and what they are seeing (By default, they are in object view, showing you what markers the cameras see).
+
+<figure>
+  <img src="./optitrack_camera_layout.png" alt="Optitrack Camera Layout" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 25. Optitrack Camera Layout </figcaption>
+</figure>
+
+  1.	If you click on one of the cameras it will:
+
+  - Highlight the markers it sees (object view)
+  - In the virtual space draw lines from the camera to the markers it sees
+  - On the physical camera you selected will have a green ring around the lens. (The other cameras will have a blue ring)
+
+4.	To build a “Rigid Body” which is an object that Motive will track, go to View>Builder. Also go to View>Assets
+
+<figure>
+  <img src="./building_rigid_body.png" alt="Building rigid body in motive" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 26. Building Rigid Body in Motive </figcaption>
+</figure>
+
+5.	If there are any rigid bodies in the Assets tab, click on them and delete them .
+6.	In the virtual space bring the markers of your rigid body into view.
+
+  a.	You can use Zoom to All to see all the markers in the virtual space by:
+
+    i.	Right clicking anywhere in the virtual space and select Zoom to All 
+
+    ii.	Holding Shift and pressing F
+
+  b.	NOTE: need at least three markers to uniquely identify each rigid body. The position and placement of the rigid body markers per object has to be unique. To allow the software to ID each rigid body.
+
+<figure>
+  <img src="./rigid_body_markers_optitrack.png" alt="Rigid Body Markers In Optitrack" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 27. Rigid Body Markers in Optitrack</figcaption>
+</figure>
 
 
+7.	Select the markers that make up your rigid body in the virtual space.  You can select markers by:
+  - Holding left click and dragging to create a selection box to select the markers. 
+  - Holding control and selecting each marker.
 
+<figure>
+  <img src="./selecting_rigid_body_markers.png" alt="Selecting Rigid Body Markers" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 28. Selecting Rigid Body Markers</figcaption>
+</figure>
 
+8.	Once the markers that make up your rigid body are selected, click Create in the Builder window. 
+  1.	In the virtual space you will now see that the markers you selected have been turned into the representation of your rigid body. 
 
+    - You will see there is now a diamond in-between your markers, which is where Motive is estimating is the center of your Rigid Body.
 
+    - You will also see lines that connect the markers together and dashed lines that show how the rigid body is formed and tracked.
+    
+    - You will also see that the rigid body is all the same color showing that it is one object.
 
-
-
-
+<figure>
+  <img src="./create_rigid_body_button.png" alt="Create Rigid Body Object" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 29. Create Rigid Body Object</figcaption>
+</figure>
 
 
 
