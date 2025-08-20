@@ -147,12 +147,17 @@ Or Use Table Method:
 
     * NOTE: the version of NatNet_SDK may be different at the time of downloading of the SDK. 
 
-Figure X: Download NatNetSDK into a folder in your workspace :  Optitrack >  Downloads > Developer Tools > NatNetSDK 
+<figure>
+  <img src="./Aerospace_Blockset_Addon.png" alt="NatNetSDK Downlaod Page" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1. Download NatNetSDK into a folder in your workspace :  Optitrack >  Downloads > Developer Tools > NatNetSDK.  </figcaption>
+</figure>
+
 
 2. Download udp_c_comm_matlab_simulink.zip from Canvas (Provided by the instructor of the lab). 
-
-3. Once the downloads are complete, move NatNet_SDK_4.3.zip and udp_c_comm_matlab_simulink.zip to the same folder -  Optitract folder. 
-
+3. Once the downloads are complete, move NatNet_SDK_4.3.zip and udp_c_comm_matlab_simulink.zip to the same folder -  Optitract folder.
 * NOTE: the version of NatNet_SDK may be different at the time of downloading of the SDK. So, you may see numbers other than 4.3. 
 
 4. Make the OptiTrack folder for Computer 1. 
@@ -160,15 +165,30 @@ Figure X: Download NatNetSDK into a folder in your workspace :  Optitrack >  Dow
 5. Extract/Unzip NatNet_SDK_4.3.zip and udp_c_comm_matlab_simulink.zip each zip file respectively into the OptiTrack folder.  
 
 6. Verify you have these MATLAB Addons  
-
-* Instrument Control Toolbox addon 
-
+* Instrument Control Toolbox Addon 
 * Aerospace Blockset Addon 
-
 * Simulink Desktop Real-Time Blockset Addon 
 
+<figure>
+  <img src="./Instrument_Control_Toolbox_Addon.png" alt="Prime X 13 Camera" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1. Instrument Control Toolbox Addon .  </figcaption>
+</figure>
 
+<figure>
+  <img src="./Aerospace_Blockset_Addon.png" alt="Prime X 13 Camera" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1. Aerospace Blockset Addon.  </figcaption>
+</figure>
 
-
-   
-
+<figure>
+  <img src="./Simulink_Desktop_Real-Time_Blockset_Addon.png" alt="Prime X 13 Camera" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1. Prime X 13 Camera.  </figcaption>
+</figure>
