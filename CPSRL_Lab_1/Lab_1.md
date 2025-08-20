@@ -5,16 +5,98 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 5: Getting Data from the Motive Software into Matlab Simulink 
 
 <div style="color:black; background:lightblue; border: 1px dashed black">
 ```
-
 | Objectives:  |
 | ----------- |
 | 1. Download NatNet SDK on Computer 1 |
 | 2. Download udp_c_comm_matlab_simulink.zip on Computer 1 |
 | 3. Validate and verify correct settings in the FuncMotive function on Computer 1  |
+
 
 ```
 </div>
