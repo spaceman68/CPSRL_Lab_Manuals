@@ -1,4 +1,4 @@
-# Lab 1: Optitrack Camera Calibration and Communication 
+# Lab 1: Optitrack Camera Calibration and Communication
 
 Authors:
 
