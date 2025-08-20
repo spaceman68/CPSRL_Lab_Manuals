@@ -148,7 +148,7 @@ Or Use Table Method:
     * NOTE: the version of NatNet_SDK may be different at the time of downloading of the SDK. 
 
 <figure>
-  <img src="./Aerospace_Blockset_Addon.png" alt="NatNetSDK Downlaod Page" width: 100%;
+  <img src="./NatNet_SDK_Download.png" alt="NatNetSDK Downlaod Page" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
