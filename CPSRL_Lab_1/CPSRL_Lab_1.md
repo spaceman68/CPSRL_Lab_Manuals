@@ -295,7 +295,7 @@ Figure X: Changing IP address of the Host in FuncMotive.m
 
 16. Then open Simulink_UDP.slx in MATLAB Simulink 
 <figure>
-  <img src="./" alt="INSERT PICTURE" width: 100%;
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
@@ -816,14 +816,14 @@ Figure X: Setting Up Actor Inputs
 10. Your Simulink should now have a visualization of a CAD object that moves with the Motive state data [X,Y,Z, Roll, Pitch, Yaw] 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Actor_Translation_Rotation_Order.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
   <figcaption>Figure 1.     </figcaption>
 </figure>
  Figure X: Example Virtual Object that Moves with Motive Data. 
-
+![alt text](Actor_Translation_Rotation_Order.png)
 
 
 #### Learning Objectives
