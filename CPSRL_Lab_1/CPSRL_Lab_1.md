@@ -212,6 +212,125 @@ Objectives:
   <figcaption>Figure 14. New Calibration  </figcaption>
 </figure>
 
+4.	To Calibrate: Wave the Calibration Wand at a slow to moderate speed around the simulation volume. As best as you can try not to block the cameras. 
+
+    REMINDER: Also try to not to bump into the camera poles or tables as the vibrations will propagate   to the cameras. 
+
+    a. If you look at the cameras you can see the rings on the camera will start off blue but will turn green as they become calibrated. The blue and green lights are directional and will help you determine what areas need further wanding.
+
+    b.	You can also look at the Motive software and see on the left side how calibrated each camera is as it turns from blue to green. You want the cameras to reach the dark green shown in figure X.
+
+    c.	You can also see in the camera view what areas have been wand-ed and areas that still need more wanding.
+
+<figure>
+  <img src="./Example_Student_Wanding.jpg" alt="Example Student Wanding" width: 50%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 15. Example Student Wanding  </figcaption>
+</figure>
+
+<figure>
+  <img src="./motive_software_during_wanding.png" alt="Motive Software During Wanding" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 16. Motive Software During Wanding  </figcaption>
+</figure>
+
+5.	Once the wanding has been captured you will then need to put the wand away and hit the Start Calculating button.  The computer will then do the calculate the calibration of the sim  space and determine the location of the cameras relative to each other.
+
+<figure>
+  <img src="./start_calibration_button.png" alt="Start Calibration Button" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 17. Start Calibration Button  </figcaption>
+</figure>
+
+6.	After wanding is completed and “start calculating” is pressed. The Optitrack software will determine the accuracy and coverage in the designated space. The software will provide feedback.  Need to get “Exceptional”
+
+<figure>
+  <img src="./Calibration_output.png" alt="Calibration Output" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 18. Calibration Output  </figcaption>
+</figure>
+
+### 2.2 Setting the Global XYZ Origin
+
+This step is necessary in order to set the Global XYZ reference frame. 
+
+1.	Position the ground plane aligned to the corner of the sim-space. Setting the ground plane to determine the Global XYZ reference frame (See Fig. X).
+
+<figure>
+  <img src="./calibration_square_zero.jpg" alt="Calibration Square Coordinate Frame" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 19. Calibration Square Zero  </figcaption>
+</figure>
+
+2.	You then can select set ground  level on the Motive software - Make sure drop down is on auto
+
+<figure>
+  <img src="./Ground_Plane_Motive.png" alt="Ground Plane for Motive" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 20. Ground Plane for Motive  </figcaption>
+</figure>
+
+3.	<span style="color:blue">Success!</span>. The cameras are now calibrated. Upon completion, the position of the cameras and the location of the XYZ Global Origin plane are shown within the motive virtual display as shown in Fig X. 
+
+
+<figure>
+  <img src="./camera_location_identified.png" alt="Camera Location Identified" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 21. Layout of the camera physical location as well as the ground plane are shown within the Motive Software  </figcaption>
+</figure>
+
+**Make sure to complete all these objectives before proceeding:**
+
+
+**Summary of Objectives:**
+ 
+
+
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+```
+
+1. Completing Calibration of Cameras
+2. Obtain a Calibration of “Exceptional” or as good as possible.
+3. Set the Global XYZ reference Frame.
+4. Get screenshots and pictures for lab report
+ 
+```
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br><!--Paragraph-->
