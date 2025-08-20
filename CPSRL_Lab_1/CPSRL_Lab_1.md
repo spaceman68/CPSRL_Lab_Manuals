@@ -1,4 +1,4 @@
-# Lab 1: Optitrack Camera Calibration and Communication
+# Lab 1: Optitrack Camera Calibration and Communication 
 
 Authors:
 
@@ -49,7 +49,7 @@ Illustrated here in Fig X and X is the floor plan of the SRL as well as an illus
 
 <p align="center">
   <img alt="Light" src="./Floor_Plan_SRL.png" width="40%">
-&nbsp; &nbsp;; &nbsp;
+&nbsp; &nbsp; &nbsp;
   <img alt="Dark" src="./Camera_Illustration.png" width="40%">
 </p>
 <p align = "center">
@@ -112,6 +112,105 @@ Objectives:
 2.	Make sure to clear the space of things that block the cameras, and anything that is high visibility or highly reflective as it will add clutter and confusion when operating the cameras.
 3.	Turn on both computers, the network switch, and the router. 
   a.	The power switches to turn the network switch and router on are behind the computer monitors. 
+
+<figure>
+  <img src="./Power_Strip.png" alt="Power Strip" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 9. Power Strip  </figcaption>
+</figure>
+
+4.	Log in on both computers 1 and 2 (refer to figure X).
+5.	On computer 2 , open MATLAB Simulink
+6.	Turn on the network switch and the router, the switches to turn them on is behind the computer monitors
+7.	Wait for the network switch to turn on. This may take a minute or two:
+
+  <p align="center">
+    <img alt="Light" src="./network_Switch.png" width="40%">
+    &nbsp; &nbsp; &nbsp;
+    <img alt="Dark" src="./wifi_router.jpg" width="45%">
+  </p>
+  <p align = "center">
+    <caption> Figure 10. Network Switch (LEFT), WiFi and Local Network Router (RIGHT) </figcaption>
+  </p>
+
+    a. This can be seen by looking at the lights on the switch, the first row of lights shows that power is being provided, there should be four lights on this row showing that the 4 cameras are being provided power
+
+    b. On the next row there should be 7  flashing lights, these lights show that communication is happening between the 4 cameras and the left computer and the router, the router will also be connected to the right computer. 
+
+    c.	The cameras will have numbers in the bottom right corner when motive is open and connected to the cameras showing how the software decided to label the cameras, and the cameras will have solid blue or green rings around the lens. (Color of ring – refer to calibration)
+
+8. Open Motive on the 1 Computer 
+
+
+<figure><p align = "center">
+  <img src="./motive_icon.png" alt="Motive Icon" width: 20%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 10. Motive Icon  </figcaption>
+  </p>
+</figure>
+
+  a. The Motive Software should show that four cameras are connected under the Cameras tab.
+
+  b. The cameras may not appear in the same order as listed in figure X.
+
+<figure>
+  <img src="./optitrack_camera_layout.png" alt="Motive Camera Layout" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 11. Motive Camera Layout  </figcaption>
+</figure>
+
+## 2: How to Calibrate the Cameras in the Motive Software
+
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+``` 
+Objectives:
+ 
+1. Completing Calibration of Cameras
+2. Obtain a Calibration of “Exceptional” or as good as possible.
+3. Set the Global XYZ reference Frame.
+4. Get screenshots and pictures for lab report
+
+``` 
+</div>
+
+### 2.1 Optitrack Camera Calibration
+
+1.	To calibrate the cameras, you will need the calibration wand and calibratio n square
+
+<figure>
+  <img src="./calibration_wand_and_square.png" alt="Calibration Wand and Square" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 12. Calibration Wand and Calibration Square  </figcaption>
+</figure>
+
+2. To reset the layout of Motive, go to the menu bar at the top left and click on the Layout button then click on the Calibration button as shown in figure 13.
+
+<figure>
+  <img src="./Calibration_Layout.png" alt="Calibration Layout" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 13. Calibration Layout  </figcaption>
+</figure>
+
+3.	To start the calibration of the cameras, go to the calibration tab in Motive and select New Calibration.
+
+<figure>
+  <img src="./New_Calibration.png" alt="New Calibration" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 14. New Calibration  </figcaption>
+</figure>
 
 
 
