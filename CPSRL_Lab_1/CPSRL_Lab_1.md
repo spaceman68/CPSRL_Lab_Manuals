@@ -472,13 +472,12 @@ NOTE: This Simulink template contains example segments of code that are not curr
 2. Add a UDP Send block from the Instrument Control Toolbox and connect it to the data lines 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./UDP_Send_Block.png" alt="UDP Send Block from Instrument Control Toolbox" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure 1. UDP Send in the Simulink Library Browser     </figcaption>
 </figure>
-Figure X: UDP Send in the Simulink Library Browser 
 <!--Picture 1-->
 <figure>
   <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
