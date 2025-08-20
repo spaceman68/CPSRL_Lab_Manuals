@@ -115,91 +115,249 @@ Objectives:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+
+## 4: Getting Data from the Motive Software into Matlab: 
+
+#### Learning Objectives
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+```
+1. Download Optitrack MATLAB Plugin 1.1.0 (Current Version) 
+
+2. Connect to SRL Wi-Fi Router with IP settings 
+
+3. Obtain your computer Wi-Fi  IP address 
+
+4. Extract the Matlab Plugin and change the appropriate IP address settings 
+
+5. Run the Matlab script - OptiSample_RigidBodyGraph.m 
+
+6. Demonstrate that sample data is streaming to your Laptop. 
+
+7. Document all steps in your team lab report. 
+```
+</div>
+
+ 
+
+## 4.1 - Downloading Optitrack MATLAB Plugin 1.1.0 
+
+1. Create a folder called OptiTrack for organizing files related to this lab.  
+
+2. First download MATLAB Plugin 1.1.0, (the version may be different) which includes software that is able to receive data from Motive. 
+    *  Go to https://optitrack.com/support/downloads/plugins.html or go to https://optitrack.com/ and click on support>downloads>plugins 
+    * Scroll down this page until you see MATLAB Plugin 1.1.0 and download the software. 
+    * NOTE: Make sure you are connected to the school Wi-fi network to have internet access. 
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: MATLAB Plugin for Connecting to Motive 
+
+3. Once the download is complete, move OptiTrack_MATLAB_Plugin_1.1.0.zip to the folder OptiTrack. 
+
+4. Extract/Unzip OptiTrack_MATLAB_Plugin_1.1.0.zip 
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Unzipped the OptiTrack_MATLAB_Plugin_1.1.0.zip Folder 
+
+5. Open the unzipped OptiTrack_MATLAB_Plugin_1.1.0, then open the Matlab folder 
+    * Inside you will find some examples of Matlab scripts that are able to capture data from Motive. 
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Opening the Unzipped OptiTrack_MATLAB_Plugin_1.1.0.zip folder 
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Opening the Matlab Folder 
+
+6. Open the natnet.m and OptiSample_RigidBodyGraph.m scripts in MATLAB. These scripts take the position and rotational data from Motive and displays it as a graph.   
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Showing the OptiTrack_MATLAB_Plugin_1.1.0.m opened in Matlab 
+
+## 4.2 - Connecting to the Space Robotics Wi-Fi Router 
+
+1. Connect to the Wi-Fi Router SPACE_ROBOTICS_LAB. The professor will give you the password. 
+    * NOTE: When connecting to the Wi-Fi router you need to connect with a fixed IP address. The Wi-Fi Router is assigned as 192.168.1.12.  Subnet mask 255.255.255.0 
+    * Your Wi-Fi setting in your computer should assign itself a number to the same path 192.168.1.X, with X a number assigned between 0 and 255. 
+    * NOTE: This network is not connected to the internet.  
+    * Do not set to auto connect. 
+
+2. Open Command Prompt. You can use the windows search to find it. 
+
+3. Type ipconfig into command prompt. You are looking the Default Gateway with the IP address of 192.168.1.12. Two lines above is the IPv4 address of the computer you are on.  
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Finding the IP address for your computer 
+
+4. Make sure that Motive is set to Streaming and the tabs for streaming are turned on. 
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Streaming in Motive software is turned on. 
+
+ 
+
+
+### 4.3 - Setting Up MATLAB to receive data from Motive 
+1. In MATLAB go into the natnet.m file and change the IP addresses. 
+
+2. Your computer is the client and is the IP address we found in step 4.2.3 
+
+3. The Motive computer is the host and is 192.168.1.10 
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Setting the Host and Client IP address in Matlab on YOUR computer. 
+
+4. In MATLAB go into the OptiSample_RigidBodyGraph.m file and change the IP addresses. 
+
+5. Your computer is the client and is the IP address we found in step 4.2.3 
+    * The Motive computer is the host and is 192.168.1.10 
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Matlab script IP address settings. 
+
+6. Run the OptiSample_RigidBodyGraph.m script.  
+<!--Picture 1-->
+<figure>
+  <img src="./MATLAB_Run_Button.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure X: Matlab Run script button 😊      </figcaption>
+</figure>
+
+ 
+The first time you run this script you will have to tell MATLAB about where the library for connecting MATLAB to MOTIVE is. You will find the library by going up one folder and selecting NatNetML.dll 
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: Selecting The Library for MOTIVE to MATLAB Communication 
+
+Upon successful connection Matlab will obtain telemetry data from Motive both posted in the command window as well as graphed in Figure 1. The Frame number should be increasing with progression in time. 
+<!--Picture 1-->
+<figure>
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1.     </figcaption>
+</figure>
+Figure X: MATLAB Receiving Telemetry Data from Motive 
+
+NOTE: Reconnect to the School Network to resume internet access. 
+
+#### Learning Objectives
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+```
+1. Download Optitrack MATLAB Plugin 1.1.0 (Current Version) 
+
+2. Connect to SRL Wi-Fi Router with IP settings 
+
+3. Obtain your computer Wi-Fi  IP address 
+
+4. Extract the Matlab Plugin and change the appropriate IP address settings 
+
+5. Run the Matlab script - OptiSample_RigidBodyGraph.m 
+
+6. Demonstrate that sample data is streaming to your Laptop. 
+
+7. Document all steps in your team lab report. 
+```
+</div>
+
+
+
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
 
 ## 5: Getting Data from the Motive Software into Matlab Simulink 
 
 #### Learning Objectives
 <div style="color:black; background:lightblue; border: 1px dashed black">
 
-``` 
-1. Download NatNet SDK on Computer 1 
+```
+1. Download NatNet SDK on Computer 1
+
 2. Download udp_c_comm_matlab_simulink.zip on Computer 1 
+
 3. Validate and verify correct settings in the FuncMotive function on Computer 1 
+
 4. Update Simulink Sim on Computer 1 
+
 5. Create UDP Send in Simulink Sim using Instrument Control Tool Box 
+
 6. Receive Optitrack Data from Motive to Simulink on Computer 1 
+
 7. Broadcast Optitrack Data from Simulink on Computer 1 
+
 8. Create Simulink Model on your Computer with UDP Receive function. 
+
 9. Receive Optitrack data in Simulink on your Computer. 
+
 10. Document and report on all steps as outlined. 
-``` 
+```
 </div>
 
 ### 5.1 How to get receive Motive data in Simulink using FuncMotive.m on Computer 1 Only. 
@@ -344,7 +502,7 @@ Figure X: Changing IP address of the Host in FuncMotive.m
 
 16. Then open Simulink_UDP.slx in MATLAB Simulink 
 <figure>
-  <img src="./" alt="INSERT PICTURE" width: 100%;
+  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
@@ -443,28 +601,6 @@ NOTE: This Simulink template contains example segments of code that are not curr
 
 
 
-
-
-
-![alt text](UDP_Send_Block.png) 
-
-
-![alt text](MATLAB_Run_Button.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### 5.2 - Setting up Computer 1 to rebroadcast Motive Data to be received in Simulink on another computer.  
 
 1. FuncMotive.m only works on the computer running Motive (Computer 1), therefore we need to rebroadcast the data in Simulink so that it can be received on another computer.  
@@ -472,13 +608,12 @@ NOTE: This Simulink template contains example segments of code that are not curr
 2. Add a UDP Send block from the Instrument Control Toolbox and connect it to the data lines 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./UDP_Send_Block.png" alt="UDP Send Block from Instrument Control Toolbox" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure 1. UDP Send in the Simulink Library Browser     </figcaption>
 </figure>
-Figure X: UDP Send in the Simulink Library Browser 
 <!--Picture 1-->
 <figure>
   <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
@@ -489,8 +624,6 @@ Figure X: UDP Send in the Simulink Library Browser
 </figure>
 Figure X: INFO 
 
- 
- 
 
 3. Use these settings for the UDP Send from the Instrument Control Toolbox. You need to set the remote. Make sure to disable “Enable blocking mode: ” 
 <!--Picture 1-->
@@ -503,7 +636,6 @@ Figure X: INFO
 </figure>
 Figure X: Settings for the UDP Send Box 
 
- 
 
 4. Add the Real-Time Sync and Set Pace blocks to your simulation. (This Step Not needed – Slows the Simulink Sim.) 
 <!--Picture 1-->
@@ -515,8 +647,6 @@ Figure X: Settings for the UDP Send Box
   <figcaption>Figure 1.     </figcaption>
 </figure>
 Figure X: Simulink Model to create on Student Computer. 
-
-
 
 
 5. Utilize the Set Pace to collect data at a set pace set to 1 sim sec to clock second. 
@@ -716,26 +846,30 @@ Figure X: Data Captured from Remote Computer
 
 ``` 
 Objectives: 
-1. Download NatNet SDK on Computer 1 
-2. Download udp_c_comm_matlab_simulink.zip on Computer 1 
-3. Validate and verify correct settings in the FuncMotive function on Computer 1 
-4. Update Simulink Sim on Computer 1 
+1. Download NatNet SDK on Computer 1
+
+2. Download udp_c_comm_matlab_simulink.zip on Computer 1
+
+3. Validate and verify correct settings in the FuncMotive function on Computer 1
+
+4. Update Simulink Sim on Computer 1
+
 5. Create UDP Send in Simulink Sim using Instrument Control Tool Box 
+
 6. Receive Optitrack Data from Motive to Simulink on Computer 1 
+
 7. Broadcast Optitrack Data from Simulink on Computer 1 
+
 8. Create Simulink Model on your Computer with UDP Receive function. 
+
 9. Receive Optitrack data in Simulink on your Computer. 
+
 10. Document and report on all steps as outlined. 
 ``` 
 </div>
 
- 
-
-   
-
- 
-
- 
+<br><!--Paragraph-->
+<br><!--Paragraph-->
 
 ## 6: EXTRA CREDIT - Using MATLAB Simulink 3D Animation to create a virtual representation of the data from Motive. 
 
@@ -862,14 +996,14 @@ Figure X: Setting Up Actor Inputs
 10. Your Simulink should now have a visualization of a CAD object that moves with the Motive state data [X,Y,Z, Roll, Pitch, Yaw] 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Actor_Translation_Rotation_Order.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
   <figcaption>Figure 1.     </figcaption>
 </figure>
  Figure X: Example Virtual Object that Moves with Motive Data. 
-
+![alt text](Actor_Translation_Rotation_Order.png)
 
 
 #### Learning Objectives
