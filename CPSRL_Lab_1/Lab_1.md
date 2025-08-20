@@ -136,7 +136,7 @@ Objectives:
 ``` 
 </div>
 
-<br> <!-- New Line -->
+<br> <!-- New Line/Paragraph -->
 
 Or Use Table Method:
 
@@ -180,27 +180,99 @@ Or Use Table Method:
 * Instrument Control Toolbox Addon 
 * Aerospace Blockset Addon 
 * Simulink Desktop Real-Time Blockset Addon 
-
+<!--Picture 1-->
 <figure>
-  <img src="./Instrument_Control_Toolbox_Addon.png" alt="Prime X 13 Camera" width: 100%;
+  <img src="./Instrument_Control_Toolbox_Addon.png" alt="Instrument Control Toolbox MATLAB Addon" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1. Instrument Control Toolbox Addon .  </figcaption>
+  <figcaption>Figure 1. Instrument Control Toolbox Addon.  </figcaption>
 </figure>
-
+<!--Picture 2-->
 <figure>
-  <img src="./Aerospace_Blockset_Addon.png" alt="Prime X 13 Camera" width: 100%;
+  <img src="./Aerospace_Blockset_Addon.png" alt="Aerospace Blockset MATLAB Addon" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
   <figcaption>Figure 1. Aerospace Blockset Addon.  </figcaption>
 </figure>
-
+<!--Picture 3-->
 <figure>
-  <img src="./Simulink_Desktop_Real-Time_Blockset_Addon.png" alt="Prime X 13 Camera" width: 100%;
+  <img src="./Simulink_Desktop_Real-Time_Blockset_Addon.png" alt="Simulink Desktop Real-Time Blockset MATLAB Addon" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1. Prime X 13 Camera.  </figcaption>
+  <figcaption>Figure 1. Simulink Desktop Real-Time Blockset Addon.  </figcaption>
 </figure>
+
+7. Reconnect to the Router:  SPACE_ROBOTICS_LAB 
+8. In MATLAB, open the Funcmotive.m file in the udp_c_comm_matlab_simulink folder.
+<figure>
+  <img src="./FuncMotive_Start.png" alt="FuncMotive_Unedited" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1. This is what you should see when you open the FuncMotive.m file in Matlab.   </figcaption>
+</figure>
+
+9. Scroll down the file until you find the line of code that is trying to point to the NatNet_SDK_X. Find this line (Line 98): dllpath = fullfile(... 
+<figure>
+  <img src="./" alt="Updating FuncMotive dllPath line." width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1. Need to update the dllPath.    </figcaption>
+</figure>
+
+In the version that you have unzipped it is: 
+
+* dllPath = fullfile('c:','Users','ORION1','Desktop','Stephen KWOK CHOON DO NOT TOUCH','Motive Streaming','NatNet_SDK_2.8','NatNetSDK','lib','x64','NatNetML.dll'); 
+
+* The dllPath has to point to the NatNetML.dll file located inside the NatNet_SDK_X.X  developer folder that you have downloaded. 
+
+
+10. Open the NatNet_SDK_4.3 folder and go down the path > NatNetSDK > lib > x64 
+
+* NOTE: the version of NatNet_SDK may be different at the time of downloading of the SDK. 
+
+* Your path may look like this: C:\Users\skwokcho\Desktop\Optitrack\NatNet_SDK_4.3\NatNetSDK\lib\x64
+
+11. Copy the path at the top of the folder.  
+
+<figure>
+  <img src="./dllPath_file_explorer.png" alt="Selecting Path in File Explorer" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 1. Showing two different ways to find the file path for the NatNetML.dll file.     </figcaption>
+</figure>
+
+
+
+
+
+
+<!-- Im doing this first  -->
+<br> <!-- New Line/Paragraph -->
+<br> <!-- New Line/Paragraph -->
+<br> <!-- New Line/Paragraph -->
+<br> <!-- New Line/Paragraph -->
+<br> <!-- New Line/Paragraph -->
+<br> <!-- New Line/Paragraph -->
+
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+``` 
+Objectives: 
+1. Download NatNet SDK on Computer 1 
+2. Download udp_c_comm_matlab_simulink.zip on Computer 1 
+3. Validate and verify correct settings in the FuncMotive function on Computer 1 
+4. Update Simulink Sim on Computer 1 
+5. Create UDP Send in Simulink Sim using Instrument Control Tool Box 
+6. Receive Optitrack Data from Motive to Simulink on Computer 1 
+7. Broadcast Optitrack Data from Simulink on Computer 1 
+8. Create Simulink Model on your Computer with UDP Receive function. 
+9. Receive Optitrack data in Simulink on your Computer. 
+10. Document and report on all steps as outlined. 
+``` 
+</div>
