@@ -1004,7 +1004,7 @@ NOTE: This Simulink template contains example segments of code that are not curr
   <figcaption>Figure X: Settings for the UDP Send Box     </figcaption>
 </figure>
 
-4. OPTIONAL: Add the Real-Time Sync and Set Pace blocks to your simulation. The Real-Time Sync and Set Pace blocks regulate the sample rate of the computer, not needed on Computer 1 as it should send data as fast as possible. 
+4. OPTIONAL: Add a Set Pace block and/or a Real-Time Sync to your simulation. The Set Pace and Real-Time Sync blocks regulate the sample rate of the computer. This isn't required on Computer 1 as we are not recording any data here
 <!--Picture 1-->
 <figure>
   <img src="./Simulink_UDP_Real-Time_Set-Pace_Blocks.png" alt="Simulink Model to create on Computer 1. " width: 100%;
@@ -1023,7 +1023,7 @@ NOTE: This Simulink template contains example segments of code that are not curr
   max-width: 50vw;>
   <figcaption>Figure X: Aerospace Blockset – Set Pace Blockset.     </figcaption>
 </figure>
- <!--Picture 1-->
+ <!--Picture 2-->
 <figure>
   <img src="./Simulink_UDP_Set-Pace_Config.png" alt="Settings for Set Pace – Match Sim Pace to Clock Time, with Inherit Sample Time setting" width: 100%;
   height: auto;
@@ -1120,82 +1120,91 @@ NOTE: This Simulink template contains example segments of code that are not curr
 4. Grab a UDP Receive block from the Instrument Control Toolbox and connect it in place of the FuncMotive block. 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP2_Receive_Block.png" alt="Insert UDP Recieve Block" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Insert UDP Recieve Block      </figcaption>
 </figure>
-Figure X: Insert UDP Recieve Block 
 
 7. Double click to set the settings for the UDP Receive block.
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./UDP_Receive_Config.png" alt="UDP Receive Config " width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: UDP Receive Config     </figcaption>
 </figure>  
 
-![alt text](UDP_Receive_Config.png)
 
-Figure X: INFO 
+8. OPTIONAL: Add a Set Pace block and/or a Real-Time Sync to your simulation. The Set Pace and Real-Time Sync blocks regulate the sample rate of the computer. This will be needed later when collecting data so that the time stamps in the simulation matchs real world time.
+    * Your student computer may also be able to support the real-time sync block. However this may depend on the student’s computer it is not as necessary and can be skipped as compared to the Set Pace Block.
 
-8. OPTIONAL: Add the Real-Time Sync blocks to your simulation. (This Step is optional – Slows the Receiver Simulink Sim.) 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP2_Set-Pace_Real-Time.png" alt="Set-Pace and Real-Time Blocks" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Set-Pace and Real-Time Blocks     </figcaption>
 </figure>
-Figure X: INFO 
 
-9. Double Click to set the settings for the Real-Time Synchronization under Simulink Desktop Real-Time Toolbox. – Depending on your application you can adjust the sampling rate of the Real-Time Synchronization. For right now set it is okay to sample at  0.1 seconds, with a maximum missed tick of 50.  
-    * (This Step is optional – Slows the Receiver Simulink Sim.) 
+    8a. Utilize the Set Pace block to run the simulation so that the simulation time is equal to real time. (1 sim second = 1 real world second)
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_Set-Pace_Block.png" alt="Aerospace Blockset – Set Pace Blockset." width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Aerospace Blockset – Set Pace Blockset.     </figcaption>
 </figure>
-Figure X: Real-Time Synchronization Block. 
+ <!--Picture 2-->
+<figure>
+  <img src="./Simulink_UDP_Set-Pace_Config.png" alt="Settings for Set Pace – Match Sim Pace to Clock Time, with Inherit Sample Time setting" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure X: Settings for Set Pace – Match Sim Pace to Clock Time, with Inherit Sample Time setting      </figcaption>
+</figure> 
 
-The Real-Time Sync and Set Pace blocks regulate the sample rate of the computer, not needed on Computer 1 as it should send data as fast as possible. 
-
-4b. Your student computer may also be able to support the real-time sync block. However this may depend on the student’s computer it is not as necessary and can be skipped as compared to the Set Pace Block. 
-
+    8b. Utilize the Real-Time Sync block to make sure the simulation samples at the correct rate.
+<!--Picture 1-->
+<figure>
+  <img src="./Simulink_UDP_Real-Time_block.png" alt="Real-Time Sync Block" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure X: Simulink Desktop Real-Time - Real-Time Sync Block      </figcaption>
+</figure>
+<!--Picture 2-->
+<figure>
+  <img src="./Simulink_UDP_Real-Time_config.png" alt="Setting for Real-Time Sync" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure X: Setting for Real-Time Sync      </figcaption>
+</figure>
  
-10. Run 'sldrtkernel -setup'  in MATLAB to setup Real Time Sync (Only have to do this the first time you use Real-Time Sync) 
-    * (This Step is optional – Slows the Receiver Simulink Sim.) 
+9. If you are using the Real-Time Sync block you will need to run this command: 'sldrtkernel -setup' in MATLAB to setup Real Time Sync. (Only have to do this the first time you use Real-Time Sync) 
  <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./MATLAB_run_sldrtkernel.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Running 'sldrtkernel -setup' to activate the real-time synchronization     </figcaption>
 </figure>
-Figure X: Running sldrtkernel -setup to activate the real-time synchronization 
 
- 
-
-11. Hit run and should receive data ( Rigid body was oscillated in the x-direction ) 
+10. Hit run and should receive data ( Rigid body was oscillated in the x-direction ) 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP2_Receive_Data.png" alt="Data Captured from Remote " width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Data Captured from Remote Computer      </figcaption>
 </figure>
-Figure X: Data Captured from Remote Computer 
-
-
 
 #### Learning Objectives
 <div style="color:black; background:lightblue; border: 1px dashed black">
@@ -1277,13 +1286,13 @@ Figure X: Simulink 3D Animation AddOn
    * In MATLAB and click the warning about running it in Simulink. https://www.mathworks.com/help/sl3d/create-world-and-actor-using-simulink.html  
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./MATLAB_open_system_command.png" alt="Using the open_system('CreateWorld'); Command" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Using the open_system("CreateWorld"); Command      </figcaption>
 </figure>
-Figure X: Using the open_system("CreateWorld"); Command 
+
 
 5. It is left to the reader to go through the documentation and examples of how to create and simulate virtual objects in Simulink. 
 
