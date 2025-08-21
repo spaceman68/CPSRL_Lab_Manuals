@@ -1259,31 +1259,28 @@ Objectives:
     * NOTE: Make sure you are connected to the school Wi-fi network to have internet access. 
 <!--Picture 1-->
 <figure><p align = "center">
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./MATLAB_Addon_Button.png" alt="MATLAB Addon Button" width: 100%;
   height: auto;
   max-width: 50vw;>
- <figcaption align = "center">Figure 1.     </figcaption>
+ <figcaption align = "center">Figure X: MATLAB Addon Button     </figcaption>
   </p>
 </figure>
-Figure X: AddOn button 
 
 2. Search for Simulink 3D Animation in the addon browser, it is made by MathWorks 
 <!--Picture 1-->
 <figure><p align = "center">
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_3D_Animation_Addon.png" alt="Simulink 3D Animation Addon" width: 100%;
   height: auto;
   max-width: 50vw;>
- <figcaption align = "center">Figure 1.     </figcaption>
+ <figcaption align = "center">Figure X: Simulink 3D Animation Addon      </figcaption>
   </p>
 </figure>
-Figure X: Simulink 3D Animation AddOn 
 
 3. Once installed, go to the documentation for the addon and go to the get started page and go through the “Create 3D Simulation Using Simulink” documents. 
     * https://www.mathworks.com/help/sl3d/ 
     * https://www.mathworks.com/help/sl3d/create-3d-simulation-using-simulink.html  
 
-4. To open the 3D sim examples, run the command open_system("CreateWorld"); 
-   * In MATLAB and click the warning about running it in Simulink. https://www.mathworks.com/help/sl3d/create-world-and-actor-using-simulink.html  
+4. To open the 3D sim examples, run the command open_system("CreateWorld"); In MATLAB and click the warning about running it in Simulink. https://www.mathworks.com/help/sl3d/create-world-and-actor-using-simulink.html  
 <!--Picture 1-->
 <figure><p align = "center">
   <img src="./MATLAB_open_system_command.png" alt="Using the open_system('CreateWorld'); Command" width: 100%;
@@ -1298,7 +1295,7 @@ Figure X: Simulink 3D Animation AddOn
 
  
 
-### 6.2 Connecting the Motive Data to a 3D simulink example. 
+### 6.2 Connecting the Motive Data to a 3D Simulink Simulation.
 
 1. Open the example CreateActorFrom3DGraphic. 
     * open_system("CreateActorFrom3DGraphic"); 
@@ -1306,36 +1303,32 @@ Figure X: Simulink 3D Animation AddOn
 2. Copy the Actor and Simulation 3D Scene Configuration Blocks and paste them into the Simulink_UDP Simulink file. 
 <!--Picture 1-->
 <figure><p align = "center">
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./3D_Simulink_Copy_Actor_World.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
   max-width: 50vw;>
- <figcaption align = "center">Figure 1.     </figcaption>
+ <figcaption align = "center">Figure X: Simulink Model with 3D blocks inserted.      </figcaption>
   </p>
 </figure>
-Figure X: Simulink Model with 3D blocks inserted. 
 
 3. Open the Actor Block (Cylinder) and modify variables.  
-* Change the variable name of the block as appropriate. 
+    3a. Change the variable name of the block as appropriate. 
 <!--Picture 1-->
 <figure><p align = "center">
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./3D_Simulink_Actor_Config1.png" alt="Actor Variable Name" width: 100%;
   height: auto;
   max-width: 50vw;>
- <figcaption align = "center">Figure 1.     </figcaption>
+ <figcaption align = "center">Figure X: Actor Variable Name      </figcaption>
   </p>
-</figure>
-Figure X: Actor Variable Name 
-
-* Go to the Inputs tab and click on browse at the bottom of the white box, then select translation and hit the right arrow. Then select rotation then hit the right arrow 
+</figure> 
+    3b. Go to the Inputs tab and click on browse at the bottom of the white box, then select translation and hit the right arrow. Then select rotation then hit the right arrow 
 <!--Picture 1-->
 <figure><p align = "center">
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./3D_Simulink_Actor_Config2.png" alt="Setting Up Actor Inputs" width: 100%;
   height: auto;
   max-width: 50vw;>
- <figcaption align = "center">Figure 1.     </figcaption>
+ <figcaption align = "center">Figure X: Setting Up Actor Inputs     </figcaption>
   </p>
 </figure>
-Figure X: Setting Up Actor Inputs 
 
 4. The actor block will now have inputs for translation and rotation. Hook up these inputs. 
     * Set Gains to 1 as inputs are already in meters 
@@ -1346,8 +1339,14 @@ Figure X: Setting Up Actor Inputs
 5. You should have connection something like this 
     * You may need to mess with gains and switching inputs to get it to work correctly 
     * Inputs are in degrees and you may need to adjust the coordinate frame to account for discontinuity in angle reading. 
+<figure><p align = "center">
+  <img src="./3D_Simulink_Complete.png" alt="3D Simulation Setup" width: 100%;
+  height: auto;
+  max-width: 50vw;>
+ <figcaption align = "center">Figure X: 3D Simulation Setup     </figcaption>
+  </p>
+</figure>
 
- 
 6. In the Simulation 3D scene block change the scene view to custom and input. 
 
 7. CONNECT TO Space Robotics Lab WIFI ROUTER 
@@ -1361,14 +1360,17 @@ Figure X: Setting Up Actor Inputs
 10. Your Simulink should now have a visualization of a CAD object that moves with the Motive state data [X,Y,Z, Roll, Pitch, Yaw] 
 <!--Picture 1-->
 <figure><p align = "center">
-  <img src="./Actor_Translation_Rotation_Order.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Actor_Translation_Rotation_Order.png" alt="Actor_Translation_Rotation_Order" width: 100%;
   height: auto;
   max-width: 50vw;>
  <figcaption align = "center">Figure 1.     </figcaption>
   </p>
 </figure>
- Figure X: Example Virtual Object that Moves with Motive Data. 
-![alt text](Actor_Translation_Rotation_Order.png)
+
+
+
+
+Figure X: Example Virtual Object that Moves with Motive Data. 
 
 
 #### Learning Objectives
@@ -1388,4 +1390,3 @@ Figure X: Setting Up Actor Inputs
 </div>
 
 <!--THE END-->
-
