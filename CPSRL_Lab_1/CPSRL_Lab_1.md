@@ -1,4 +1,4 @@
-# Lab 1: Optitrack Camera Calibration and Communication
+# Lab 1: Optitrack Camera Calibration and Communication 
 
 Authors:
 
@@ -49,7 +49,7 @@ Illustrated here in Fig X and X is the floor plan of the SRL as well as an illus
 
 <p align="center">
   <img alt="Light" src="./Floor_Plan_SRL.png" width="40%">
-&nbsp; &nbsp;; &nbsp;
+&nbsp; &nbsp; &nbsp;
   <img alt="Dark" src="./Camera_Illustration.png" width="40%">
 </p>
 <p align = "center">
@@ -112,6 +112,333 @@ Objectives:
 2.	Make sure to clear the space of things that block the cameras, and anything that is high visibility or highly reflective as it will add clutter and confusion when operating the cameras.
 3.	Turn on both computers, the network switch, and the router. 
   a.	The power switches to turn the network switch and router on are behind the computer monitors. 
+
+<figure>
+  <img src="./Power_Strip.png" alt="Power Strip" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 9. Power Strip  </figcaption>
+</figure>
+
+4.	Log in on both computers 1 and 2 (refer to figure X).
+5.	On computer 2 , open MATLAB Simulink
+6.	Turn on the network switch and the router, the switches to turn them on is behind the computer monitors
+7.	Wait for the network switch to turn on. This may take a minute or two:
+
+  <p align="center">
+    <img alt="Light" src="./network_Switch.png" width="40%">
+    &nbsp; &nbsp; &nbsp;
+    <img alt="Dark" src="./wifi_router.jpg" width="45%">
+  </p>
+  <p align = "center">
+    <caption> Figure 10. Network Switch (LEFT), WiFi and Local Network Router (RIGHT) </figcaption>
+  </p>
+
+    a. This can be seen by looking at the lights on the switch, the first row of lights shows that power is being provided, there should be four lights on this row showing that the 4 cameras are being provided power
+
+    b. On the next row there should be 7  flashing lights, these lights show that communication is happening between the 4 cameras and the left computer and the router, the router will also be connected to the right computer. 
+
+    c.	The cameras will have numbers in the bottom right corner when motive is open and connected to the cameras showing how the software decided to label the cameras, and the cameras will have solid blue or green rings around the lens. (Color of ring – refer to calibration)
+
+8. Open Motive on the 1 Computer 
+
+
+<figure><p align = "center">
+  <img src="./motive_icon.png" alt="Motive Icon" width: 20%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 10. Motive Icon  </figcaption>
+  </p>
+</figure>
+
+  a. The Motive Software should show that four cameras are connected under the Cameras tab.
+
+  b. The cameras may not appear in the same order as listed in figure X.
+
+<figure>
+  <img src="./optitrack_camera_layout.png" alt="Motive Camera Layout" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 11. Motive Camera Layout  </figcaption>
+</figure>
+
+## 2: How to Calibrate the Cameras in the Motive Software
+
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+``` 
+Objectives:
+ 
+1. Completing Calibration of Cameras
+2. Obtain a Calibration of “Exceptional” or as good as possible.
+3. Set the Global XYZ reference Frame.
+4. Get screenshots and pictures for lab report
+
+``` 
+</div>
+
+### 2.1 Optitrack Camera Calibration
+
+1.	To calibrate the cameras, you will need the calibration wand and calibratio n square
+
+<figure>
+  <img src="./calibration_wand_and_square.png" alt="Calibration Wand and Square" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 12. Calibration Wand and Calibration Square  </figcaption>
+</figure>
+
+2. To reset the layout of Motive, go to the menu bar at the top left and click on the Layout button then click on the Calibration button as shown in figure 13.
+
+<figure>
+  <img src="./Calibration_Layout.png" alt="Calibration Layout" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 13. Calibration Layout  </figcaption>
+</figure>
+
+3.	To start the calibration of the cameras, go to the calibration tab in Motive and select New Calibration.
+
+<figure>
+  <img src="./New_Calibration.png" alt="New Calibration" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 14. New Calibration  </figcaption>
+</figure>
+
+4.	To Calibrate: Wave the Calibration Wand at a slow to moderate speed around the simulation volume. As best as you can try not to block the cameras. 
+
+    REMINDER: Also try to not to bump into the camera poles or tables as the vibrations will propagate   to the cameras. 
+
+    a. If you look at the cameras you can see the rings on the camera will start off blue but will turn green as they become calibrated. The blue and green lights are directional and will help you determine what areas need further wanding.
+
+    b.	You can also look at the Motive software and see on the left side how calibrated each camera is as it turns from blue to green. You want the cameras to reach the dark green shown in figure X.
+
+    c.	You can also see in the camera view what areas have been wand-ed and areas that still need more wanding.
+
+<figure>
+  <img src="./Example_Student_Wanding.jpg" alt="Example Student Wanding" width: 50%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 15. Example Student Wanding  </figcaption>
+</figure>
+
+<figure>
+  <img src="./motive_software_during_wanding.png" alt="Motive Software During Wanding" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 16. Motive Software During Wanding  </figcaption>
+</figure>
+
+5.	Once the wanding has been captured you will then need to put the wand away and hit the Start Calculating button.  The computer will then do the calculate the calibration of the sim  space and determine the location of the cameras relative to each other.
+
+<figure>
+  <img src="./start_calibration_button.png" alt="Start Calibration Button" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 17. Start Calibration Button  </figcaption>
+</figure>
+
+6.	After wanding is completed and “start calculating” is pressed. The Optitrack software will determine the accuracy and coverage in the designated space. The software will provide feedback.  Need to get “Exceptional”
+
+<figure>
+  <img src="./Calibration_output.png" alt="Calibration Output" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 18. Calibration Output  </figcaption>
+</figure>
+
+### 2.2 Setting the Global XYZ Origin
+
+This step is necessary in order to set the Global XYZ reference frame. 
+
+1.	Position the ground plane aligned to the corner of the sim-space. Setting the ground plane to determine the Global XYZ reference frame (See Fig. X).
+
+<figure>
+  <img src="./calibration_square_zero.jpg" alt="Calibration Square Coordinate Frame" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 19. Calibration Square Zero  </figcaption>
+</figure>
+
+2.	You then can select set ground  level on the Motive software - Make sure drop down is on auto
+
+<figure>
+  <img src="./Ground_Plane_Motive.png" alt="Ground Plane for Motive" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 20. Ground Plane for Motive  </figcaption>
+</figure>
+
+3.	<span style="color:blue">Success!</span>. The cameras are now calibrated. Upon completion, the position of the cameras and the location of the XYZ Global Origin plane are shown within the motive virtual display as shown in Fig X. 
+
+
+<figure>
+  <img src="./camera_location_identified.png" alt="Camera Location Identified" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 21. Layout of the camera physical location as well as the ground plane are shown within the Motive Software  </figcaption>
+</figure>
+
+**Make sure to complete all these objectives before proceeding:**
+
+
+**Summary of Objectives:**
+
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+```
+
+1. Completing Calibration of Cameras
+2. Obtain a Calibration of “Exceptional” or as good as possible.
+3. Set the Global XYZ reference Frame.
+4. Get screenshots and pictures for lab report
+ 
+```
+</div>
+
+
+## 3: Setting Up Motive to Track Objects and Broadcast Data
+
+
+
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+```
+Objectives:
+
+1. Make a Ridged body in Motive
+2. In Motive get the position and rotation graphs for your Ridged Body
+3. Set up and Turn on Broadcast 
+4. Get screenshots for lab report
+
+```
+</div>
+
+### 3.1 Create Rigid Body
+1.	To reset the layout of Motive on Computer 1, go to the menu bar at the  top left and click on the Layout button then click on the Calibration   button as shown in figure X to reset the layout to a default orientation and information
+
+<figure>
+  <img src="./Calibration_Layout_setting.png" alt="Camera Location Identified" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 22. Calibration Layout  </figcaption>
+</figure>
+
+<figure>
+  <img src="./Standard_Motive_Layout.png" alt="Standard Motive Layout" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 23. Standard layout of the Motive Software if the ”Layout > Calibrate” button is pressed. </figcaption>
+</figure>
+
+2.	Recall From Earlier: Motive recreates the simulation space virtually, which is shown in the top middle of the screen. 
+
+  - Use the scroll wheel to the virtual camera to zoom in and out. 
+  - Hold down the middle mouse button (push down the scroll wheel) and move the mouse to translate the virtual camera.
+  - Hold down right click and move the mouse to rotate the virtual camera.
+
+<figure>
+  <img src="./Motive_Virtual_Space.png" alt="Motive Virtual Space" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 24. Motive Virtual Space </figcaption>
+</figure>
+
+3.	Below the virtual space, the cameras that are connected are shown and what they are seeing (By default, they are in object view, showing you what markers the cameras see).
+
+<figure>
+  <img src="./optitrack_camera_layout.png" alt="Optitrack Camera Layout" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 25. Optitrack Camera Layout </figcaption>
+</figure>
+
+  1.	If you click on one of the cameras it will:
+
+  - Highlight the markers it sees (object view)
+  - In the virtual space draw lines from the camera to the markers it sees
+  - On the physical camera you selected will have a green ring around the lens. (The other cameras will have a blue ring)
+
+4.	To build a “Rigid Body” which is an object that Motive will track, go to View>Builder. Also go to View>Assets
+
+<figure>
+  <img src="./building_rigid_body.png" alt="Building rigid body in motive" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 26. Building Rigid Body in Motive </figcaption>
+</figure>
+
+5.	If there are any rigid bodies in the Assets tab, click on them and delete them .
+6.	In the virtual space bring the markers of your rigid body into view.
+
+  a.	You can use Zoom to All to see all the markers in the virtual space by:
+
+    i.	Right clicking anywhere in the virtual space and select Zoom to All 
+
+    ii.	Holding Shift and pressing F
+
+  b.	NOTE: need at least three markers to uniquely identify each rigid body. The position and placement of the rigid body markers per object has to be unique. To allow the software to ID each rigid body.
+
+<figure>
+  <img src="./rigid_body_markers_optitrack.png" alt="Rigid Body Markers In Optitrack" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 27. Rigid Body Markers in Optitrack</figcaption>
+</figure>
+
+
+7.	Select the markers that make up your rigid body in the virtual space.  You can select markers by:
+  - Holding left click and dragging to create a selection box to select the markers. 
+  - Holding control and selecting each marker.
+
+<figure>
+  <img src="./selecting_rigid_body_markers.png" alt="Selecting Rigid Body Markers" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 28. Selecting Rigid Body Markers</figcaption>
+</figure>
+
+8.	Once the markers that make up your rigid body are selected, click Create in the Builder window. 
+  1.	In the virtual space you will now see that the markers you selected have been turned into the representation of your rigid body. 
+
+    - You will see there is now a diamond in-between your markers, which is where Motive is estimating is the center of your Rigid Body.
+
+    - You will also see lines that connect the markers together and dashed lines that show how the rigid body is formed and tracked.
+    
+    - You will also see that the rigid body is all the same color showing that it is one object.
+
+<figure>
+  <img src="./create_rigid_body_button.png" alt="Create Rigid Body Object" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 29. Create Rigid Body Object</figcaption>
+</figure>
+
+
+
+
 
 
 
