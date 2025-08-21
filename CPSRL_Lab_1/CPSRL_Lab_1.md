@@ -550,7 +550,7 @@ Objectives:
     * NOTE: Make sure you are connected to the school Wi-fi network to have internet access. 
 <!--Picture 1-->
 <figure>
-  <img src="./OptiTrack_MATLAB_Plugin.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./OptiTrack_MATLAB_Plugin.png" alt="OptiTrack_MATLAB_Plugin" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
@@ -562,7 +562,7 @@ Objectives:
 4. Extract/Unzip OptiTrack_MATLAB_Plugin_1.1.0.zip 
 <!--Picture 1-->
 <figure>
-  <img src="./OptiTrack_MATLAB_Plugin_Unzipped.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./OptiTrack_MATLAB_Plugin_Unzipped.png" alt="OptiTrack_MATLAB_Plugin_Unzipped" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
@@ -573,33 +573,30 @@ Objectives:
     * Inside you will find some examples of Matlab scripts that are able to capture data from Motive. 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./OptiTrack_MATLAB_Plugin_Opened.png" alt="OptiTrack_MATLAB_Plugin_Opened" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Opening the Unzipped OptiTrack_MATLAB_Plugin_1.1.0.zip folder      </figcaption>
 </figure>
-Figure X: Opening the Unzipped OptiTrack_MATLAB_Plugin_1.1.0.zip folder 
-<!--Picture 1-->
+<!--Picture 2-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./MATLAB_Plugin_MATLAB.png" alt="MATLAB_Plugin_MATLAB Folder" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Opening the Matlab Folder      </figcaption>
 </figure>
-Figure X: Opening the Matlab Folder 
 
 6. Open the natnet.m and OptiSample_RigidBodyGraph.m scripts in MATLAB. These scripts take the position and rotational data from Motive and displays it as a graph.   
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./OptiTrack_MATLAB_Plugin_Opened_in_MATLAB.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Showing the OptiTrack_MATLAB_Plugin_1.1.0.m opened in Matlab      </figcaption>
 </figure>
-Figure X: Showing the OptiTrack_MATLAB_Plugin_1.1.0.m opened in Matlab 
 
 ## 4.2 - Connecting to the Space Robotics Wi-Fi Router 
 
@@ -614,62 +611,52 @@ Figure X: Showing the OptiTrack_MATLAB_Plugin_1.1.0.m opened in Matlab
 3. Type ipconfig into command prompt. You are looking the Default Gateway with the IP address of 192.168.1.12. Two lines above is the IPv4 address of the computer you are on.  
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./ipconfig_student_example.png" alt="ipconfig_student_example" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Finding the IP address for your computer      </figcaption>
 </figure>
-Figure X: Finding the IP address for your computer 
 
 4. Make sure that Motive is set to Streaming and the tabs for streaming are turned on. 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Motive_Broadcast_Settings.png" alt="Motive_Broadcast_Settings.png" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Streaming in Motive software is turned on.      </figcaption>
 </figure>
-Figure X: Streaming in Motive software is turned on. 
-
- 
-
 
 ### 4.3 - Setting Up MATLAB to receive data from Motive 
 1. In MATLAB go into the natnet.m file and change the IP addresses. 
-
-2. Your computer is the client and is the IP address we found in step 4.2.3 
-
-3. The Motive computer is the host and is 192.168.1.10 
-<!--Picture 1-->
-<figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
-  height: auto;
-  /* Magic! */
-  max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
-</figure>
-Figure X: Setting the Host and Client IP address in Matlab on YOUR computer. 
-
-4. In MATLAB go into the OptiSample_RigidBodyGraph.m file and change the IP addresses. 
-
-5. Your computer is the client and is the IP address we found in step 4.2.3 
+    * Your computer is the client and is the IP address we found in step 4.2.3 
     * The Motive computer is the host and is 192.168.1.10 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./natnet_ipconfig.png" alt="natnet_ipconfig" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Setting the Host and Client IP address in Matlab on YOUR computer.      </figcaption>
 </figure>
-Figure X: Matlab script IP address settings. 
 
-6. Run the OptiSample_RigidBodyGraph.m script.  
+2. In MATLAB go into the OptiSample_RigidBodyGraph.m file and change the IP addresses. 
+    * Your computer is the client and is the IP address we found in step 4.2.3 
+    * The Motive computer is the host and is 192.168.1.10 
 <!--Picture 1-->
 <figure>
-  <img src="./MATLAB_Run_Button.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./RigidBodyGraph_ipconfig.png" alt="RigidBodyGraph_ipconfig" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure X: Matlab script IP address settings.      </figcaption>
+</figure>
+
+3. Run the OptiSample_RigidBodyGraph.m script.  
+<!--Picture 1-->
+<figure>
+  <img src="./MATLAB_Run_Button.png" alt="MATLAB_Run_Button" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
@@ -677,27 +664,25 @@ Figure X: Matlab script IP address settings.
 </figure>
 
  
-The first time you run this script you will have to tell MATLAB about where the library for connecting MATLAB to MOTIVE is. You will find the library by going up one folder and selecting NatNetML.dll 
+4. The first time you run this script you will have to tell MATLAB about where the library for connecting MATLAB to MOTIVE is. You will find the library by going up one folder and selecting NatNetML.dll 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./RigidBodyGraph_Select_Library.png" alt="RigidBodyGraph_Select_Library_NatNetML.dll" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Selecting The Library for MOTIVE to MATLAB Communication      </figcaption>
 </figure>
-Figure X: Selecting The Library for MOTIVE to MATLAB Communication 
 
-Upon successful connection Matlab will obtain telemetry data from Motive both posted in the command window as well as graphed in Figure 1. The Frame number should be increasing with progression in time. 
+5. Upon successful connection Matlab will obtain telemetry data from Motive both posted in the command window as well as graphed in Figure 1. The Frame number should be increasing with progression in time. 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./RigidBodyGraph_Running.png" alt="RigidBodyGraph_Running" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: MATLAB Receiving Telemetry Data from Motive      </figcaption>
 </figure>
-Figure X: MATLAB Receiving Telemetry Data from Motive 
 
 NOTE: Reconnect to the School Network to resume internet access. 
 
@@ -720,8 +705,6 @@ NOTE: Reconnect to the School Network to resume internet access.
 7. Document all steps in your team lab report. 
 ```
 </div>
-
-
 
 <br><!--Paragraph-->
 <br><!--Paragraph-->
@@ -824,9 +807,9 @@ NOTE: Reconnect to the School Network to resume internet access.
   <figcaption>Figure 1. This is what you should see when you open the FuncMotive.m file in Matlab.   </figcaption>
 </figure>
 
-9. Scroll down the file until you find the line of code that is trying to point to the NatNet_SDK_X. Find this line (Line 98): dllpath = fullfile(... 
+9. Scroll down the file until you find the line of code that is trying to point to the NatNet_SDK_X. Find this line (Line 98): dllpath = fullfile(...
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="Updating FuncMotive dllPath line." width: 100%;
+  <img src="./FuncMotive_dllPath_line_unedited.png" alt="Updating FuncMotive dllPath line." width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
@@ -834,10 +817,8 @@ NOTE: Reconnect to the School Network to resume internet access.
 </figure>
 
     * In the version that you have unzipped it is: 
-
     * dllPath = fullfile('c:','Users','ORION1','Desktop','Stephen KWOK CHOON DO NOT TOUCH','Motive Streaming','NatNet_SDK_2.8','NatNetSDK','lib','x64','NatNetML.dll'); 
-
-    * The dllPath has to point to the NatNetML.dll file located inside the NatNet_SDK_X.X  developer folder that you have downloaded. 
+    * The dllPath has to point to the NatNetML.dll file located inside the NatNet_SDK_X.X developer folder that you have downloaded. 
 
 
 10. Open the NatNet_SDK_4.3 folder and go down the path > NatNetSDK > lib > x64 
@@ -856,54 +837,51 @@ NOTE: Reconnect to the School Network to resume internet access.
 </figure>
 
 12. Paste the path in the FuncMotive.m script, above the dllPath line of code (see figure X in step 7 and 11.). And make sure to comment out the path as shown. 
-<figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
-  height: auto;
-  /* Magic! */
-  max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
-</figure>
 
-13. Change the existing dllPath path to the path that was pasted above and point to NatNetML.dll . Refer to figure X. 
+13. Change the existing dllPath path to the path that was pasted above and point to NatNetML.dll, Refer to figure X. 
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./FuncMotive_dllPath_line_edited.png" alt="./FuncMotive_dllPath_line_edited.png" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Showing the updated dllPath in the FuncMotive.m file.      </figcaption>
 </figure>
-Figure X: Showing the updated dllPath in the FuncMotive.m file. 
 
 14. Make sure the Matlab workspace file path points back to the FuncMotive.m folder 
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./MATLAB_FuncMotive.png" alt="MATLAB_FuncMotive.png" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Matlab Pointing to the correct folder that contains the FuncMotive.m file.       </figcaption>
 </figure>
-Figure X: Matlab Pointing to the correct folder that contains the FuncMotive.m file. 
 
 15. Change the IP address in Funcmotive.m to the IP Address of the computer running Motive. This is because the Motive software is broadcasting on Computer 1 on the IP address of “192.168.1.10” 
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./FuncMotive_ipconfig.png" alt="FuncMotive_ipconfig.png" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Changing IP address of the Host in FuncMotive.m      </figcaption>
 </figure>
-Figure X: Changing IP address of the Host in FuncMotive.m 
-
 
 16. Then open Simulink_UDP.slx in MATLAB Simulink 
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_unedited.png" alt="Simulink_UDP_unedited.png" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Simulink Block diagram of Simulink_UPD.slx file.       </figcaption>
 </figure>
-Figure X: Simulink Block diagram of Simulink_UPD.slx file.  
+
+ 
+ ![alt text](Simulink_UDP_add_mux_display.png) 
+
+
+
+
+
+
 
 NOTE: This Simulink template contains example segments of code that are not currently necessary but can be implemented later for control of a vehicle. We are going to edit and comment out parts of the Simulink model that are not needed at this moment in time. 
 
@@ -914,20 +892,20 @@ NOTE: This Simulink template contains example segments of code that are not curr
 
 19. Comment out all the control blocks after and including the big Matlab Block named “Solenoid Mapping Function” by holding left clicking off to the side and drawing a big selection box. Then right click on the Matlab Block and select Comment Out. 
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_comment_out_right_side.png" alt="Commenting Out Control Logic" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Commenting Out Control Logic     </figcaption>
 </figure>
 
 20. Disconnect the lines to the commented-out code by clicking and dragging the end of the arrows. 
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_disconnect_lines.png" alt="Figure X: Disconnecting the Lines" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Disconnecting the Lines     </figcaption>
 </figure>
 
 21. Go to the right end of the control section and copy the black box(mux) and text box(display). 
@@ -941,30 +919,30 @@ NOTE: This Simulink template contains example segments of code that are not curr
 
 22. Paste it next to the lines you disconnected earlier and “uncomment” the mux and display to activate them. You may need to move the previously commented blocks to the left to make some space.  
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_add_mux_display.png" alt="Uncommenting The Mux and Display Blocks" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Uncommenting The Mux and Display Blocks     </figcaption>
 </figure>
 
-23. Change the mux so that it has 6 inputs.  
+23. Change the mux so that it has 6 inputs. You can change the settings of a block by double clicking on it.  
     * NOTE: If you are tracking 2,3, ... X rigid body objects this needs to be adjusted accordingly. Each rigid body object provides Position [X,Y,Z] and Orientation [Theta, Psi, Phi] OR Quaternion [Qw,Qx,Qy,Qz] - Refer to the FuncMotive.m file for customization – Or ask the instructor :)  
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_modify_mux.png" alt="Changing Size of Mux" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Changing Size of Mux.     </figcaption>
 </figure>
 
 24. Connect X, Y, Z, Yaw, Pitch, and Roll to the Mux (black box). You will need to delete the terminates on the Z and angle values. Also delete the d/dt, derivative blocks. You can also add a scope to any of the channels.  
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_connected_display_scope.png" alt="Figure X: Simulink with Display and Scope Connected" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Simulink with Display and Scope Connected     </figcaption>
 </figure>
 
 25. Verify Motive has the correct broadcast settings. 
@@ -979,28 +957,26 @@ NOTE: This Simulink template contains example segments of code that are not curr
 26. Click run on Simulink. You should see data being streamed and displayed from Motive.
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_run_display_scope.png" alt="Figure X: MATLAB Displaying Position and Rotation Data" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: MATLAB Displaying Position and Rotation Data     </figcaption>
 </figure>
 <!--Picture 2-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Motive_Data_Sent_Simulink.png" alt="Figure X: Motive Displaying Position Data" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Motive Displaying Position Data     </figcaption>
 </figure>
-
-
 
 ### 5.2 - Setting up Computer 1 to rebroadcast Motive Data to be received in Simulink on another computer.  
 
 1. FuncMotive.m only works on the computer running Motive (Computer 1), therefore we need to rebroadcast the data in Simulink so that it can be received on another computer.  
 
-2. Add a UDP Send block from the Instrument Control Toolbox and connect it to the data lines 
+2. Add a UDP Send block from the Instrument Control Toolbox and connect it to the same data lines as the display block
 <!--Picture 1-->
 <figure>
   <img src="./UDP_Send_Block.png" alt="UDP Send Block from Instrument Control Toolbox" width: 100%;
@@ -1011,94 +987,70 @@ NOTE: This Simulink template contains example segments of code that are not curr
 </figure>
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_block_UDP_SEND.png" alt="UDP Send block placed and connected  " width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: UDP Send block placed and connected     </figcaption>
 </figure>
-Figure X: INFO 
-
 
 3. Use these settings for the UDP Send from the Instrument Control Toolbox. You need to set the remote. Make sure to disable “Enable blocking mode: ” 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_block_UDP_SEND_config.png" alt="Settings for the UDP Send Box" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Settings for the UDP Send Box     </figcaption>
 </figure>
-Figure X: Settings for the UDP Send Box 
 
-
-4. Add the Real-Time Sync and Set Pace blocks to your simulation. (This Step Not needed – Slows the Simulink Sim.) 
+4. OPTIONAL: Add the Real-Time Sync and Set Pace blocks to your simulation. The Real-Time Sync and Set Pace blocks regulate the sample rate of the computer, not needed on Computer 1 as it should send data as fast as possible. 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_Real-Time_Set-Pace_Blocks.png" alt="Simulink Model to create on Computer 1. " width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Simulink Model to create on Computer 1.     </figcaption>
 </figure>
-Figure X: Simulink Model to create on Student Computer. 
 
-
-5. Utilize the Set Pace to collect data at a set pace set to 1 sim sec to clock second. 
+    4a. Utilize the Set Pace block to run the simulation so that the simulation time is equal to real time. (1 sim second = 1 real world second)
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_Set-Pace_Block.png" alt="Aerospace Blockset – Set Pace Blockset." width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Aerospace Blockset – Set Pace Blockset.     </figcaption>
 </figure>
-Figure X: Aerospace Blockset – Set Pace Blockset 
  <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_Set-Pace_Config.png" alt="Settings for Set Pace – Match Sim Pace to Clock Time, with Inherit Sample Time setting" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
-</figure>
-Figure X: Settings for Set Pace – Match Sim Pace to Clock Time, with Inherit Sample Time setting 
+  <figcaption>Figure X: Settings for Set Pace – Match Sim Pace to Clock Time, with Inherit Sample Time setting      </figcaption>
+</figure> 
 
-
-
-6. Your student computer may also be able to support the real-time sync block. However this may depend on the student’s computer it is not as necessary and can be skipped as compared to the Set Pace Block. 
+    4b. Utilize the Real-Time Sync block to make sure the simulation samples at the correct rate.
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_Real-Time_block.png" alt="Real-Time Sync Block" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Simulink Desktop Real-Time - Real-Time Sync Block      </figcaption>
 </figure>
-Figure X: Real-Time Sync Block 
-<!--Picture 1-->
+<!--Picture 2-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_Real-Time_config.png" alt="Setting for Real-Time Sync" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Setting for Real-Time Sync      </figcaption>
 </figure>
-Figure X: Setting for Real-Time Sync  
 
-
-5. Double Click to set the settings for the Real-Time Synchronization under Simulink Desktop Real-Time Toolbox. – Depending on your application you can adjust the sampling rate of the Real-Time Synchronization. For right now set it is okay to sample at  0.1 seconds, with a maximum missed tick of 50. (This Step Not needed – Slows the Simulink Sim.) 
-<!--Picture 1-->
-<figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
-  height: auto;
-  /* Magic! */
-  max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
-</figure>or Real-Time Synchronization. 
-Figure X: Set Pace settings. 
-
-6. Congratulations! You are now sending via UDP communication to YOUR COMPUTER.  
+5. Congratulations! You are now sending via UDP communication to YOUR COMPUTER.  
     * NOTE: Computer 1 is now sending data to the particular IP address and Port Number as described. User Datagram Protocol (UDP) does not need a handshake with the receiver and when running is sending as much data as decided by the Real-Time Synchronization. In this case it is commanded to act at a sample rate of 0.1 seconds. 
 
 
@@ -1109,60 +1061,63 @@ Figure X: Set Pace settings.
     * NOTE: Make sure to save often and save once you are done with this step your Simulink Model on Your Computer should look like this: 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP_connected_display_scope.png" alt="Simulink Setup on Your Computer" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Simulink Setup on Your Computer      </figcaption>
 </figure>
-Figure X: Simulink Setup on Your Computer 
 
-2. You will need to have the Instrument Control Toolbox addon, to check if you have it and to install it click the addons button in Matlab 
+2. You will need to the following MATLAB addons, make sure you have them installed. To check if you have it and or need to install it click the addons button in Matlab 
     * NOTE: Make sure you are connected to the school Wi-fi network to have internet access. 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./MATLAB_Addon_Button.png" alt="MATLAB Addon Button" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: MATLAB Addon Button     </figcaption>
 </figure>
-Figure X: MATLAB Addon Button 
 
-3. Search for Instrument Control Toolbox in the addon browser, it is made by MathWorks press the install button. 
+    2a. Search for Instrument Control Toolbox in the addon browser, it is made by MathWorks.
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Instrument_Control_Toolbox_Addon.png" alt="Instrument Control Toolbox Addon" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Instrument Control Toolbox Addon      </figcaption>
 </figure>
-Figure X: Instrument Control Toolbox Addon 
+    2b. Search for Aerospace Blockset Addon in the addon browser, it is made by MathWorks.
+<!--Picture 2-->
+<figure>
+  <img src="./Aerospace_Blockset_Addon.png" alt="Aerospace Blockset Addon" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure X: Aerospace Blockset Addon      </figcaption>
+</figure>
+    2c. Search for Simulink Desktop Real-Time Addon in the addon browser, it is made by MathWorks.
+<!--Picture 3-->
+<figure>
+  <img src="./Simulink_Desktop_Real-Time_Blockset_Addon.png" alt="Simulink Desktop Real-Time Addon" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure X: Simulink Desktop Real-Time Addon      </figcaption>
+</figure>
 
-4. Once the installation is complete, Search for Simulink Desktop Real-Time in the addon browser, it is made by MathWorks press the install button. 
+3. Once Matlab has restarted, go back to Simulink and comment out FuncMotive block and disconnect it.  
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./Simulink_UDP2_remove_FuncMotive.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Comment out FuncMotive Block      </figcaption>
 </figure>
-Figure X: Simulink Desktop Real-Time Addon 
 
-5. Once Matlab has restarted, go back to Simulink and comment out FuncMotive block and disconnect it.  
-<!--Picture 1-->
-<figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
-  height: auto;
-  /* Magic! */
-  max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
-</figure>
-Figure X: Comment out FuncMotive Block 
-
-6. Grab a UDP Receive block from the Instrument Control Toolbox and connect it in place of the FuncMotive block. 
+4. Grab a UDP Receive block from the Instrument Control Toolbox and connect it in place of the FuncMotive block. 
 <!--Picture 1-->
 <figure>
   <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
@@ -1182,7 +1137,9 @@ Figure X: Insert UDP Recieve Block
   max-width: 50vw;>
   <figcaption>Figure 1.     </figcaption>
 </figure>  
+
 ![alt text](UDP_Receive_Config.png)
+
 Figure X: INFO 
 
 8. OPTIONAL: Add the Real-Time Sync blocks to your simulation. (This Step is optional – Slows the Receiver Simulink Sim.) 
@@ -1207,6 +1164,10 @@ Figure X: INFO
   <figcaption>Figure 1.     </figcaption>
 </figure>
 Figure X: Real-Time Synchronization Block. 
+
+The Real-Time Sync and Set Pace blocks regulate the sample rate of the computer, not needed on Computer 1 as it should send data as fast as possible. 
+
+4b. Your student computer may also be able to support the real-time sync block. However this may depend on the student’s computer it is not as necessary and can be skipped as compared to the Set Pace Block. 
 
  
 10. Run 'sldrtkernel -setup'  in MATLAB to setup Real Time Sync (Only have to do this the first time you use Real-Time Sync) 
