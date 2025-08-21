@@ -550,26 +550,24 @@ Objectives:
     * NOTE: Make sure you are connected to the school Wi-fi network to have internet access. 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./OptiTrack_MATLAB_Plugin.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
-</figure>
-Figure X: MATLAB Plugin for Connecting to Motive 
+  <figcaption>Figure X: MATLAB Plugin for Connecting to Motive      </figcaption>
+</figure> 
 
 3. Once the download is complete, move OptiTrack_MATLAB_Plugin_1.1.0.zip to the folder OptiTrack. 
 
 4. Extract/Unzip OptiTrack_MATLAB_Plugin_1.1.0.zip 
 <!--Picture 1-->
 <figure>
-  <img src="./INSERT_PICTURE.png" alt="INSERT PICTURE" width: 100%;
+  <img src="./OptiTrack_MATLAB_Plugin_Unzipped.png" alt="INSERT PICTURE" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption>Figure 1.     </figcaption>
+  <figcaption>Figure X: Unzipped the OptiTrack_MATLAB_Plugin_1.1.0.zip Folder      </figcaption>
 </figure>
-Figure X: Unzipped the OptiTrack_MATLAB_Plugin_1.1.0.zip Folder 
 
 5. Open the unzipped OptiTrack_MATLAB_Plugin_1.1.0, then open the Matlab folder 
     * Inside you will find some examples of Matlab scripts that are able to capture data from Motive. 
