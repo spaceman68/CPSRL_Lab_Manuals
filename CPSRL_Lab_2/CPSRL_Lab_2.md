@@ -216,3 +216,87 @@ Objectives:
 3 Determine the offset angle vectors between the granite table and gravity vector
 ```
 </div>
+
+
+### 2.1. Determine the level of the granite table from Optitrack Data
+
+1.	Transfer the Data to MATLAB    
+    a.	readmatrix from Excel file
+    
+    b.	Import Data Button
+
+2.	Calculate max difference in height (Delta Y)
+
+3.	Create a 3D Scatter plot to visualize the current level of the table.
+
+    a.	<code>Scatter3()</code> – Matlab Command
+
+    b.	View the plot in isometric view and include the figure within your report using the View – Matlab command
+
+    c.	NOTE: MATLAB has the vertical axis as Z, while the data has the vertical axis in Y. You will have to swap the Y and Z datasets for visualization purposes.
+
+<figure>
+  <img src="./scatter3_viz.png" alt="scatter visualization of example dataset" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 12: Scatter visualization using Matlab of Table recorded values.      </figcaption>
+</figure> 
+
+
+4.	Create a 3D Scatter plot showing actual shape of table using the axis equal command when plotting the scatter plot
+    a.	<code>axis equal;</code>
+    b.	Also use the <code> zlim </code> command for example <code> zlim([-200,200]) </code> to make sure that Y-axis is shown.
+
+<figure>
+  <img src="./scatter3_visualization_matlab_axis_equal.png" alt="scatter visualization with axis equal" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 13: : Example Table Visualization with the axis equal command and z limit implemented that allows you to see the Y-axis.      </figcaption>
+</figure> 
+
+### 2.2: Determine the gravity vector using OptiTrack and Simulink.
+
+The premise of this experiment is to drop a rigid body object that is tracked by the Optitrack Motive software with data collected in Matlab|Simulink. This shall be accomplished utilizing the MATLAB|Simulink model that the students developed from Lab 1 to collect data of the rigid body. 
+
+Three rigid body drop experiments shall be performed and an average taken in order to determine the gravity vector.
+
+1.	As part of the process to level the granite table. We need to determine the gravity vector to find and compare the table normal plane to the gravity normal plane. To do this we create a rigid body object using Optitrack. Materials Needed:
+
+    a.	A Rigid Body that can be dropped (such as a carboard box)
+        
+        With OptiTrack markers placed on it as shown in Figure X.
+
+    b.	OptiTract Cameras - Software
+
+    c.	Motive – Software with Streaming enabled.
+
+    d.	Simulink – With data capture enabled to a .mat file.
+
+  <p align="center">
+    <img alt="rigid body object in motive" src="./box_rigid_body.png" width="35%">
+    &nbsp; &nbsp; &nbsp;
+    <img alt="cardboard rigid body object" src="./box.JPG" width="30%">
+  </p>
+  <p align = "center">
+    <caption> Figure 14. Rigid Body Object (LEFT), Cardboard Box Object (RIGHT) </figcaption>
+  </p>
+
+2.	Setup Motive and the Rigid body (See Lab 1 for a review of how to do so.)
+    
+    a.	Set up Rigid Body
+    
+    b.	Set up Broadcasting
+
+3.	Setup Simulink to capture data (See Lab 1 for a review of how to do so.)
+
+    a.	Use a To File block and save the data for each run to for example a <code>mat</code> file called <code>rigid_body.mat</code> . This will save all input data into the <code>mat</code> file that can be post-processed in MATLAB.
+
+<figure>
+  <img src="./saving_data_to_mat_file_v2.png" alt="saving mat file" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 15 : Example Table Visualization with the axis equal command and z limit implemented that allows you to see the Y-axis.      </figcaption>
+</figure> 
