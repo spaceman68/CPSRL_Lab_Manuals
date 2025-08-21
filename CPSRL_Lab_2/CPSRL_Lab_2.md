@@ -160,3 +160,59 @@ In the following lab we are going to determine the inverse of the gravity vector
   max-width: 50vw;>
   <figcaption>Figure 10: Rigid Body Objects visualized in Motive Software      </figcaption>
 </figure>
+
+10.	Record each X/Y/Z values of every Rigid Body you created on the White Board.
+
+    a.	NOTE: Make sure you are getting the values from the center of the Rigid Body (the diamond in the middle) and not the points.
+
+    b.	It is best to record the Rigid Bodies from one side of the table to the other, as it makes it easier to spot changes in height values in the matrixes. (And it looks nicer and can spot errors better)
+
+<figure>
+  <img src="./white_board.JPG" alt="Data Collection on Whiteboard" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 11: Data Collection on Whiteboard      </figcaption>
+</figure>
+
+11.	Move the markers along the table as outlined in Figure X below.
+
+    a.	Repeat steps 7-10
+    
+    b.	Collect and record data to determine the measured level of the granite table (see Figure X and X below for example markers points to collect and track.)
+    
+    c.	At a minimum, collect the following Rigid Body information in order to characterize the table.
+    
+    d.	After all data has been collected. You should have a table of X, Y, and Z data for processing as shown in Figure X below.
+
+
+<figure>
+  <img src="./Rigid Body Locations.png" alt="Rigid Body Locations" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 12: All Rigid Body Locations to be tracked.      </figcaption>
+</figure> 
+
+
+#### Summary of Learning Objectives
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+```
+- Measure and determine the level of the table through OptiTrack
+```
+</div>
+
+## 2: Analyze Data in MATLAB
+
+#### Summary of Learning Objectives
+<div style="color:black; background:lightblue; border: 1px dashed black">
+
+```
+Objectives:
+ 
+1 Determine the level of the granite table from Optitrack Data collected. 
+2 Determine the normal vertical vector (gravity vector) of the room using OptiTrack and Simulink. 
+3 Determine the offset angle vectors between the granite table and gravity vector
+```
+</div>
