@@ -122,7 +122,7 @@ Objectives:
 </figure>
 
 4.	Log in on both computers 1 and 2 (refer to figure X).
-5.	On computer 2 , open MATLAB Simulink
+5.	On computer 2 (The second lab computer and Student Computer) , open MATLAB Simulink
 6.	Turn on the network switch and the router, the switches to turn them on is behind the computer monitors
 7.	Wait for the network switch to turn on. This may take a minute or two:
 
@@ -137,7 +137,7 @@ Objectives:
 
     a. This can be seen by looking at the lights on the switch, the first row of lights shows that power is being provided, there should be four lights on this row showing that the 4 cameras are being provided power
 
-    b. On the next row there should be 7  flashing lights, these lights show that communication is happening between the 4 cameras and the left computer and the router, the router will also be connected to the right computer. 
+    b. On the next row there should be flashing lights, these lights show that communication is happening between the 4 cameras and the left computer and the router, the router will also be connected to the right computer. 
 
     c.	The cameras will have numbers in the bottom right corner when motive is open and connected to the cameras showing how the software decided to label the cameras, and the cameras will have solid blue or green rings around the lens. (Color of ring – refer to calibration)
 
@@ -218,7 +218,7 @@ Objectives:
 
     a. If you look at the cameras you can see the rings on the camera will start off blue but will turn green as they become calibrated. The blue and green lights are directional and will help you determine what areas need further wanding.
 
-    b.	You can also look at the Motive software and see on the left side how calibrated each camera is as it turns from blue to green. You want the cameras to reach the dark green shown in figure X.
+    b.	You can also look at the Motive software and see on the left side how calibrated as the LED ring around each camera turns from blue to green. You want the cameras to reach the dark green. The sections of LED that are blue indicate the quadrant of the camera vision that still needs another pass with the wand and further calibration.
 
     c.	You can also see in the camera view what areas have been wand-ed and areas that still need more wanding.
 
@@ -420,7 +420,7 @@ Objectives:
 </figure>
 
 8.	Once the markers that make up your rigid body are selected, click Create in the Builder window. 
-  1.	In the virtual space you will now see that the markers you selected have been turned into the representation of your rigid body. 
+9. In the virtual space you will now see that the markers you selected have been turned into the representation of your rigid body. 
 
     - You will see there is now a diamond in-between your markers, which is where Motive is estimating is the center of your Rigid Body.
 
@@ -436,14 +436,84 @@ Objectives:
   <figcaption>Figure 29. Create Rigid Body Object</figcaption>
 </figure>
 
+<figure>
+  <img src="./rigid_body_object.png" alt="Rigid Body Object" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 30. Rigid Body Object</figcaption>
+</figure>
+
+9.	To see the data that Motive is collecting, click ONLY the center diamond by left clicking on it.  Or click on the rigid body through the assets tab.
+10.	Go to View > Graph1, this will show you the X,Y,Z positions of the diamond.
+
+    a.	You can drag the edge of the window to see it better 
+
+    b.	If you are tracking a mobile object such as a the rigid body cardboard box in the lab. A team member can pick up the cardboard box and move it around to show that it is being tracked by the optitrack software.
+
+<figure>
+  <img src="./rigid_body_position.png" alt="Rigid Body Object Position" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 30. Graphs of [X Y Z] Position of the Rigid Body</figcaption>
+</figure>
+
+11.	To show rotation: 
+
+    11.1 Click on the graph you want to change (X, Y, or Z).
+
+    11.2 Across the top of the graph window there are several options.  Open the option on the farthest left, it will give you a checkbox window of graphing options. 
+
+      - Leave the Markers section alone as it is for labeling the graphs (the background letters of X, Y, and Z).
+
+    11.3 In the Rigid Body/Bone section uncheck X, Y, Z and check RotX, RotY, and/or RotZ to show rotation instead of position respectively.
+
+<figure>
+  <img src="./optitrack_plotting_options.png" alt="Optitrack plotting options" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 31. Selecting options to display [ RotX, RotY, RotZ ] Rotation of the rigid body instead of Position [x , y, z] of the rigid body.</figcaption>
+</figure>
 
 
+<figure>
+  <img src="./displaying_rotation_information.png" alt="Displaying Rotation information in Motive" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 31. Showing the graph of rotation information in motive.</figcaption>
+</figure>
 
 
+### 3.2 Setup broadcasting / Stream of Rigid Body Data 
 
+1.	To start broadcasting, go to Edit > Settings
 
-<br><!--Paragraph-->
-<br><!--Paragraph-->
+<figure>
+  <img src="./settings_tab.png" alt="Select Settings Tab" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 32. Select Settings Tab.</figcaption>
+</figure>
+
+2.	Go to the Streaming Tab
+3.	Ensure that the following setting are enabled:
+
+<figure>
+  <img src="./broadcast_Settings.png" alt="broadcast settings" width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 50vw;>
+  <figcaption>Figure 33. Broadcast Settings</figcaption>
+</figure>
+
+4.	You may need to turn enable broadcasting off and on to get the settings to be set.
+
+    NOTE: Only these ports for streaming are available: 1510, 1511, 1512, 5000, 9910, and 27000.
+
 <br><!--Paragraph-->
 
 ## 4: Getting Data from the Motive Software into Matlab: 
