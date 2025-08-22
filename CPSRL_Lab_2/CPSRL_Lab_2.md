@@ -428,9 +428,7 @@ Three rigid body drop experiments shall be performed and an average taken in ord
 
 ## 3: Calibration and Leveling the Granite Table.
 
-Objectives:
- 
-
+#### Learning Objectives:
 
 <div style="color:black; background:lightblue; border: 1px dashed black">
 
@@ -444,13 +442,12 @@ Objectives:
 
 To determine how much each jack should be adjusted - we are going to use a Floating Spacecraft Simulator testbed. (https://irp.cdn-website.com/4fbb675e/files/uploaded/Federal-Spec-GGG-P-463c.1.pdf )
 
-
 <figure align = "center" >
-  <img src="./jack_placement.png" alt="Jack Placement for granite table" width: 100%;
+  <img src="./FEDERAL SPECIFICATION PLATE, SURFACE, (GRANITE)-Page5.png" alt="Jack Placement for granite table" width: 100%;
   height: auto;
   /* Magic! */
   max-width: 50vw;>
-  <figcaption align = "center" >Figure 19: Jack Placement for Granite Table </figcaption>
+  <figcaption align = "center" >Figure 19: Jack Placement for Granite Table (https://irp.cdn-website.com/4fbb675e/files/uploaded/Federal-Spec-GGG-P-463c.1.pdf ) </figcaption>
 </figure>
 
 1.	Additional Materials Needed:
