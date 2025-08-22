@@ -336,7 +336,7 @@ The objective of this part is to guide the students through the process of setti
         a. Create two rigid body objects. 
 <!--Picture 1-->
 <figure align = "center">
-  <img src="./Air_Bearing_Vehicle_Labeled1.png" alt="Make two rigid body objects. " width: 100%;
+  <img src="./OptiTrack_2_Rigid_Bodies_Creating.png" alt="Make two rigid body objects. " width: 100%;
   height: auto;
   max-width: 50vw;>
  <figcaption align = "center">Figure X: Make two rigid body objects.       </figcaption>
@@ -346,7 +346,7 @@ The objective of this part is to guide the students through the process of setti
         b. Observe both rigid body objects in Motive 
 <!--Picture 1-->
 <figure align = "center">
-  <img src="./Air_Bearing_Vehicle_Labeled1.png" alt="Observe both rigid body objects in Motive " width: 100%;
+  <img src="./OptiTrack_2_Rigid_Bodies_Selected.png" alt="Observe both rigid body objects in Motive " width: 100%;
   height: auto;
   max-width: 50vw;>
  <figcaption align = "center">Figure X: Observe both rigid body objects in Motive       </figcaption>
@@ -406,7 +406,7 @@ NOTE: Here is where you can get quaternions instead of euler angles. If you use 
         a. Hint: Larger Muxs to handle the larger input 
 <!--Picture 1-->
 <figure align = "center">
-  <img src="./Air_Bearing_Vehicle_Labeled1.png" alt="Simulink Config on Computer 1 – Twelve – 12 variables collected from the modified FuncMotive function " width: 100%;
+  <img src="./Simulink_UDP_2_Body.png" alt="Simulink Config on Computer 1 – Twelve – 12 variables collected from the modified FuncMotive function " width: 100%;
   height: auto;
   max-width: 50vw;>
  <figcaption align = "center">Figure X: Simulink Config on Computer 1 – Twelve – 12 variables collected from the modified FuncMotive function       </figcaption>
@@ -414,7 +414,7 @@ NOTE: Here is where you can get quaternions instead of euler angles. If you use 
 </figure>
 <!--Picture 1-->
 <figure align = "center">
-  <img src="./Air_Bearing_Vehicle_Labeled1.png" alt="Settings are still the same on Computer 1 " width: 100%;
+  <img src="./Simulink_UDP_2_Body_UDP_Send_Config.png" alt="Settings are still the same on Computer 1 " width: 100%;
   height: auto;
   max-width: 50vw;>
  <figcaption align = "center">Figure X: Settings are still the same on Computer 1       </figcaption>
@@ -426,7 +426,7 @@ NOTE: Here is where you can get quaternions instead of euler angles. If you use 
  
 ### 3.2 Tracking and Recording of a Multiple Rigid Body System through Motive and Matlab|Simulink 
 
-Prepare two air-bearing vehicles for the experiment 
+1. Prepare two air-bearing vehicles for the experiment 
 <!--Picture 1-->
 <figure align = "center">
   <img src="./2_Air_Bearing_Vehicles1.jpg" alt="Two Air-Bearing Vehicles " width: 100%;
@@ -447,7 +447,7 @@ Prepare two air-bearing vehicles for the experiment
 2. On Computer 1 set up Motive to track the 2 air-bearing vehicles 
 <!--Picture 1-->
 <figure align = "center">
-  <img src="./Air_Bearing_Vehicle_Labeled1.png" alt="Two rigid bodies tracked in optitrack " width: 100%;
+  <img src="./OptiTrack_2_Rigid_Bodies.png" alt="Two rigid bodies tracked in optitrack " width: 100%;
   height: auto;
   max-width: 50vw;>
  <figcaption align = "center">Figure X: Two rigid bodies tracked in optitrack       </figcaption>
