@@ -106,8 +106,11 @@ Shown here in Figure 6 are the two computers that are connected to the Switch an
 ``` 
 </div>
 
-## 1: Starting Things Up
+<br><!--Paragraph-->
+<br><!--Paragraph-->
+<br><!--Paragraph-->
 
+## 1: Starting Things Up
 
 1.	Set up the space:
 
@@ -117,11 +120,12 @@ Shown here in Figure 6 are the two computers that are connected to the Switch an
 
     c.	Remove highly reflective objects and high vis items
 
+
 2.	Make sure to clear the space of things that block the cameras, and anything that is high visibility or highly reflective as it will add clutter and confusion when operating the cameras.
 
 3.	Turn on both computers, the network switch, and the router.
 
-    a.	The power switches to turn the network switch and router on are behind the computer monitors. 
+    3a. The power switches to turn the network switch and router on are behind the computer monitors. 
 
 <figure align = "center">
   <img src="./Power_Strip.png" alt="Power Strip" width: 100%;
